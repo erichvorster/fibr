@@ -1,0 +1,124 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import './responsive';
+@import './variables';
+
+
+
+* {
+padding: 0;
+margin:0;
+box-sizing: border-box;
+}
+
+//NAV
+
+nav{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height:8vh;
+  
+
+
+  .nav__ul{
+        position: absolute;
+        right:0px;
+        height:92vh;
+        top:8vh;
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:50%;
+        transform: translateX(110%);
+        transition: transform 0.5s ease-in;
+        justify-content: space-around;
+        align-items: center;
+
+
+      .nav__item{
+          list-style: none;
+          
+          a{
+              text-decoration: none;
+              color:black;
+          }
+      }
+  }
+}
+
+@media screen and (min-width:768px){
+    
+    .nav__ul{
+        
+        position: static;
+
+    }
+
+
+    .burger{
+        display: none;
+    }
+}
+
+
+.burger{
+    
+
+    .line{
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px; 
+    }
+}
+
+
+.hero{
+    background-image: linear-gradient(to bottom,$blue,$lightBlue);
+    height:100vh;
+    color:$white;
+}
+
+.hero__content{
+    
+    
+}
+
+
+
+// CARDZ
+
+.card1{
+    min-height: 50rem;
+    background-image: linear-gradient(to bottom,$lightBlue,$white);
+    border-radius: 20px;
+    color:white;
+}
+.card2{
+    min-height: 50rem;
+    background-image: linear-gradient(to bottom,$white,$lightBlue);
+    border-radius: 20px;
+    color:white;
+}
+
+//BANNER
+
+.banner__1{
+    background-color:$blue; 
+    min-height:40vh;
+    color:white;
+}
+
+//SERVICES
+
+.service__card{
+    min-height:400px;
+    background-color: $lightBlue;
+    border-radius: 20px;
+    
+    .service__card--img{
+      height:70%;
+      background-color: $green;
+    }
+}
