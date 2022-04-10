@@ -4,12 +4,16 @@
 
 
 
+
 * {
 padding: 0;
 margin:0;
 box-sizing: border-box;
 }
 
+body{
+    font-family:'Poppins', sans-serif;
+}
 //NAV
 
 nav{
@@ -76,16 +80,94 @@ nav{
 
 .hero{
     background-image: linear-gradient(to bottom,$blue,$lightBlue);
-    height:100vh;
     color:$white;
 }
+
+.hero__img{
+    
+}
+    
+
+
+.button-1 {
+  background: $blue;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  height:50px;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-2 {
+  background: $blue;
+  border-radius: 999px;
+  box-shadow:0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 400px;
+  height:50px;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-3 {
+    background: $white;
+    border-radius: 999px;
+    box-shadow: 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 200px;
+    height:50px;
+    word-break: break-word;
+    border: 0;
+  }
 
 .hero__content{
     
     
 }
 
-
+.hero__header{
+    font-weight: 700;
+    letter-spacing: 3px;
+    color:$lightBlue;
+}
 
 // CARDZ
 
@@ -102,8 +184,17 @@ nav{
     color:white;
 }
 
-//BANNER
+.card__img{
+    padding:5rem;
+}
 
+//BANNER
+.banner__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .banner__1{
     background-color:$blue; 
     min-height:40vh;
@@ -112,13 +203,57 @@ nav{
 
 //SERVICES
 
+
+
 .service__card{
-    min-height:400px;
-    background-color: $lightBlue;
+    text-align: center;
     border-radius: 20px;
+    min-height:40rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     
-    .service__card--img{
-      height:70%;
-      background-color: $green;
+
+    
+    img{
+        width:80%;
+        margin: 0 auto;
+        
     }
+
+    .service__card--content{
+        width:100%;
+        min-height:15rem;
+        background-color: $white;
+        color:$blue;
+        border-radius: 0 0 20px 20px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+.service__card.card1{
+    background-image: linear-gradient(to bottom right, $white, $blue);
+}
+.service__card.card2{
+    background-image: linear-gradient(to bottom left, $lightBlue, $blue);
+}
+.service__card.card3{
+    background-image: linear-gradient(to bottom right, $lightBlue, $white);
+}
+
+//PRICING
+.pricing__container{
+    background-color: $blue;
+}
+.pricing__card{
+  border-radius:20px;
+}
+
+.pricing__content{
+    background-image: linear-gradient(to bottom, $white, $lightBlue);
+    border-radius: 0 0 20px 20px;
 }
