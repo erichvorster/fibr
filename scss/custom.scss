@@ -83,22 +83,37 @@ nav{
     color:$white;
 }
 
-.hero__img{
-    
+.hero__content{
+   .hero__header{
+     font-size: 2rem;
+   }
+   .hero__sub__header{
+       font-size:1rem;
+   }
 }
+
+.hero__img{
+   
+
+    img{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
     
 
 
 .button-1 {
   background: $blue;
   border-radius: 999px;
-  box-shadow: 0 10px 20px -10px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
@@ -110,18 +125,24 @@ nav{
   height:50px;
   word-break: break-word;
   border: 0;
+  transition: all 0.1s ease;
+}
+
+.button-1:hover{
+    transform: scale(105%);
+    background-color: $lightBlue;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .button-2 {
-  background: $blue;
+  background: $lightBlue;
   border-radius: 999px;
   box-shadow:0 10px 20px -10px;
-  box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-family:  "poppins", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
@@ -133,18 +154,22 @@ nav{
   height:50px;
   word-break: break-word;
   border: 0;
+  transition: all 0.1s ease;
+}
+.button-2:hover{
+    transform: scale(105%);
+    background-color: $blue;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .button-3 {
-    background: $white;
+    background: $lightBlue;
     border-radius: 999px;
-    box-shadow: 0 10px 20px -10px;
-    box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-family: "poppins", sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 24px;
     opacity: 1;
     outline: 0 solid transparent;
@@ -156,7 +181,14 @@ nav{
     height:50px;
     word-break: break-word;
     border: 0;
+    transition: all 0.1s ease;
   }
+
+  .button-3:hover{
+    transform: scale(105%);
+    background-color: $blue;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 
 .hero__content{
     
@@ -171,17 +203,29 @@ nav{
 
 // CARDZ
 
+.cardi{
+   transition: all 0.3s ease;
+}
+.cardi:hover{
+   transform: translateY(-5px);
+   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+
 .card1{
     min-height: 50rem;
-    background-image: linear-gradient(to bottom,$lightBlue,$white);
+    background-image: linear-gradient(to bottom,$lightBlue,$blue);
     border-radius: 20px;
     color:white;
+    width:100%;
 }
 .card2{
     min-height: 50rem;
-    background-image: linear-gradient(to bottom,$white,$lightBlue);
+    background-image: linear-gradient(to bottom,$blue,$lightBlue);
     border-radius: 20px;
     color:white;
+    width:100%;
 }
 
 .card__img{
@@ -196,9 +240,9 @@ nav{
     align-items: center;
 }
 .banner__1{
-    background-color:$blue; 
+    background-color:$white; 
     min-height:40vh;
-    color:white;
+    color:$blue;
 }
 
 //SERVICES
@@ -224,7 +268,6 @@ nav{
     .service__card--content{
         width:100%;
         min-height:15rem;
-        background-color: $white;
         color:$blue;
         border-radius: 0 0 20px 20px;
         display:flex;
@@ -247,13 +290,35 @@ nav{
 
 //PRICING
 .pricing__container{
-    background-color: $blue;
+    background-color: $white;
+    
 }
 .pricing__card{
   border-radius:20px;
 }
 
+.pricing__header{
+    color:$blue;
+}
+
+.pricing__paragraph{
+    color:$blue;
+}
 .pricing__content{
-    background-image: linear-gradient(to bottom, $white, $lightBlue);
+    
     border-radius: 0 0 20px 20px;
+}
+
+
+
+//AVAILABILITY
+
+.availability{
+    background-color: $blue;
+    color:white;
+    text-align: center;
+}
+
+.availability__span{
+    color:$lightBlue;
 }

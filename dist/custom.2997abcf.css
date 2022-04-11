@@ -12039,18 +12039,29 @@ nav .nav__ul .nav__item a {
   color: #c4d6ed;
 }
 
+.hero__content .hero__header {
+  font-size: 2rem;
+}
+
+.hero__content .hero__sub__header {
+  font-size: 1rem;
+}
+
+.hero__img img {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .button-1 {
   background: #2b5592;
   border-radius: 999px;
-  -webkit-box-shadow: 0 10px 20px -10px;
-          box-shadow: 0 10px 20px -10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
@@ -12065,20 +12076,28 @@ nav .nav__ul .nav__item a {
   height: 50px;
   word-break: break-word;
   border: 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.button-1:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  background-color: #64BBE3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .button-2 {
-  background: #2b5592;
+  background: #64BBE3;
   border-radius: 999px;
   -webkit-box-shadow: 0 10px 20px -10px;
           box-shadow: 0 10px 20px -10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
@@ -12093,20 +12112,26 @@ nav .nav__ul .nav__item a {
   height: 50px;
   word-break: break-word;
   border: 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.button-2:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  background-color: #2b5592;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .button-3 {
-  background: #c4d6ed;
+  background: #64BBE3;
   border-radius: 999px;
-  -webkit-box-shadow: 0 10px 20px -10px;
-          box-shadow: 0 10px 20px -10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
@@ -12121,6 +12146,16 @@ nav .nav__ul .nav__item a {
   height: 50px;
   word-break: break-word;
   border: 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.button-3:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  background-color: #2b5592;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .hero__header {
@@ -12129,20 +12164,34 @@ nav .nav__ul .nav__item a {
   color: #64BBE3;
 }
 
+.cardi {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cardi:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 .card1 {
   min-height: 50rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#64BBE3), to(#c4d6ed));
-  background-image: linear-gradient(to bottom, #64BBE3, #c4d6ed);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#64BBE3), to(#2b5592));
+  background-image: linear-gradient(to bottom, #64BBE3, #2b5592);
   border-radius: 20px;
   color: white;
+  width: 100%;
 }
 
 .card2 {
   min-height: 50rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#c4d6ed), to(#64BBE3));
-  background-image: linear-gradient(to bottom, #c4d6ed, #64BBE3);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b5592), to(#64BBE3));
+  background-image: linear-gradient(to bottom, #2b5592, #64BBE3);
   border-radius: 20px;
   color: white;
+  width: 100%;
 }
 
 .card__img {
@@ -12166,9 +12215,9 @@ nav .nav__ul .nav__item a {
 }
 
 .banner__1 {
-  background-color: #2b5592;
+  background-color: #c4d6ed;
   min-height: 40vh;
-  color: white;
+  color: #2b5592;
 }
 
 .service__card {
@@ -12195,7 +12244,6 @@ nav .nav__ul .nav__item a {
 .service__card .service__card--content {
   width: 100%;
   min-height: 15rem;
-  background-color: #c4d6ed;
   color: #2b5592;
   border-radius: 0 0 20px 20px;
   display: -webkit-box;
@@ -12229,17 +12277,33 @@ nav .nav__ul .nav__item a {
 }
 
 .pricing__container {
-  background-color: #2b5592;
+  background-color: #c4d6ed;
 }
 
 .pricing__card {
   border-radius: 20px;
 }
 
+.pricing__header {
+  color: #2b5592;
+}
+
+.pricing__paragraph {
+  color: #2b5592;
+}
+
 .pricing__content {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#c4d6ed), to(#64BBE3));
-  background-image: linear-gradient(to bottom, #c4d6ed, #64BBE3);
   border-radius: 0 0 20px 20px;
+}
+
+.availability {
+  background-color: #2b5592;
+  color: white;
+  text-align: center;
+}
+
+.availability__span {
+  color: #64BBE3;
 }
 
 
