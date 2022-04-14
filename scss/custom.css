@@ -12037,6 +12037,12 @@ nav .nav__ul .nav__item a {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2b5592), to(#64BBE3));
   background-image: linear-gradient(to bottom, #2b5592, #64BBE3);
   color: #c4d6ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero__content .hero__header {
@@ -12164,6 +12170,33 @@ nav .nav__ul .nav__item a {
   color: #64BBE3;
 }
 
+@media screen and (min-width: 996px) {
+  .hero {
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__content .hero__header {
+    font-size: 3rem;
+  }
+  .hero__content .hero__sub__header {
+    font-size: 1.5rem;
+  }
+}
+
+.card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .cardi {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -12177,25 +12210,27 @@ nav .nav__ul .nav__item a {
 }
 
 .card1 {
-  min-height: 50rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#64BBE3), to(#2b5592));
   background-image: linear-gradient(to bottom, #64BBE3, #2b5592);
   border-radius: 20px;
   color: white;
-  width: 100%;
 }
 
 .card2 {
-  min-height: 50rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2b5592), to(#64BBE3));
   background-image: linear-gradient(to bottom, #2b5592, #64BBE3);
   border-radius: 20px;
   color: white;
-  width: 100%;
 }
 
 .card__img {
   padding: 5rem;
+}
+
+@media screen and (min-width: 996px) {
+  .cardi {
+    max-width: 600px;
+  }
 }
 
 .banner__container {
@@ -12212,6 +12247,7 @@ nav .nav__ul .nav__item a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 50%;
 }
 
 .banner__1 {
@@ -12274,6 +12310,15 @@ nav .nav__ul .nav__item a {
 .service__card.card3 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#64BBE3), to(#c4d6ed));
   background-image: linear-gradient(to bottom right, #64BBE3, #c4d6ed);
+}
+
+@media screen and (min-width: 996px) {
+  .service__card--container {
+    margin: 0 auto;
+  }
+  .service__card {
+    max-width: 400px;
+  }
 }
 
 .pricing__container {

@@ -63,8 +63,8 @@ nav{
     .burger{
         display: none;
     }
-}
 
+}
 
 .burger{
     
@@ -78,9 +78,13 @@ nav{
 }
 
 
+//HERO
+
 .hero{
     background-image: linear-gradient(to bottom,$blue,$lightBlue);
     color:$white;
+    display: flex;
+    justify-content: center;
 }
 
 .hero__content{
@@ -190,10 +194,7 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.hero__content{
-    
-    
-}
+
 
 .hero__header{
     font-weight: 700;
@@ -201,8 +202,37 @@ nav{
     color:$lightBlue;
 }
 
+
+
+@media screen and (min-width:996px){
+
+    .hero{
+        height:80vh;
+        display:flex;
+        align-items: center;
+    }
+
+    .hero__content{
+
+        .hero__header{
+            font-size: 3rem;
+        }
+
+        .hero__sub__header{
+            font-size:1.5rem;
+        }
+    
+    }
+
+    
+}
+
 // CARDZ
 
+.card__container{
+    display: flex;
+    justify-content: center;
+}
 .cardi{
    transition: all 0.3s ease;
 }
@@ -214,30 +244,40 @@ nav{
 
 
 .card1{
-    min-height: 50rem;
+   
     background-image: linear-gradient(to bottom,$lightBlue,$blue);
     border-radius: 20px;
     color:white;
-    width:100%;
+    
 }
 .card2{
-    min-height: 50rem;
+    
     background-image: linear-gradient(to bottom,$blue,$lightBlue);
     border-radius: 20px;
     color:white;
-    width:100%;
+    
 }
 
 .card__img{
     padding:5rem;
 }
 
+@media screen and (min-width:996px){
+
+    .cardi{
+        max-width: 600px;
+        
+    }
+
+    
+}
 //BANNER
 .banner__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 50%;
 }
 .banner__1{
     background-color:$white; 
@@ -274,7 +314,7 @@ nav{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        background-color: ;
     }
 }
 
@@ -286,6 +326,18 @@ nav{
 }
 .service__card.card3{
     background-image: linear-gradient(to bottom right, $lightBlue, $white);
+}
+
+@media screen and (min-width:996px){
+
+.service__card--container{
+    margin:0 auto;
+}
+.service__card{
+    max-width:400px;
+}
+
+    
 }
 
 //PRICING
