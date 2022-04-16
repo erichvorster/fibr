@@ -23,6 +23,9 @@ nav{
   min-height:8vh;
   
 
+.speed{
+    font-size: 2rem;
+}
 
   .nav__ul{
         position: absolute;
@@ -202,6 +205,24 @@ nav{
     color:$lightBlue;
 }
 
+.hero__link{
+    text-decoration: none;
+    color:$white;
+}
+.hero__link:hover{
+    text-decoration: none;
+    color:$white;
+
+    .fa-arrow-right{
+        transform: translateX(5px);
+        color:$white;
+        transition: all 0.2s ease ;
+    }
+}
+
+
+
+
 
 
 @media screen and (min-width:996px){
@@ -285,8 +306,31 @@ nav{
     color:$blue;
 }
 
-//SERVICES
+//IMAGE CARDS
 
+.card__img__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img__card{
+   min-height:36rem;
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   padding: 1rem 0;
+
+   .img__card__content{
+       max-height:50%;
+   }
+    img{
+     max-width:12rem;
+     
+    }
+}
 
 
 .service__card{
@@ -306,7 +350,6 @@ nav{
     }
 
     .service__card--content{
-        width:100%;
         min-height:15rem;
         color:$blue;
         border-radius: 0 0 20px 20px;
@@ -314,7 +357,7 @@ nav{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: ;
+        background-color:#fff;
     }
 }
 
