@@ -12118,7 +12118,7 @@ nav .nav__ul .nav__item a {
   -webkit-user-select: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  width: 400px;
+  width: 200px;
   height: 50px;
   word-break: break-word;
   border: 0;
@@ -12222,6 +12222,8 @@ nav .nav__ul .nav__item a {
 .cardi {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  max-width: 500px;
+  max-height: 650px;
 }
 
 .cardi:hover {
@@ -12247,12 +12249,15 @@ nav .nav__ul .nav__item a {
 
 .card__img {
   padding: 5rem;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
-@media screen and (min-width: 996px) {
-  .cardi {
-    max-width: 600px;
-  }
+.card__img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .banner__container {
@@ -12307,79 +12312,48 @@ nav .nav__ul .nav__item a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem 0;
+  max-height: 32rem;
+  border-radius: 20px;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b5592), to(#64BBE3));
+  background-image: linear-gradient(to bottom, #2b5592, #64BBE3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.img__card .img__card__img {
+  width: 20rem;
+  height: auto;
+}
+
+.img__card .img__card__img img {
+  width: 100%;
+  height: auto;
 }
 
 .img__card .img__card__content {
-  max-height: 50%;
-}
-
-.img__card img {
-  max-width: 12rem;
-}
-
-.service__card {
-  text-align: center;
-  border-radius: 20px;
-  min-height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.service__card img {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.service__card .service__card--content {
-  min-height: 15rem;
-  color: #2b5592;
-  border-radius: 0 0 20px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
+  color: white;
 }
 
-.service__card.card1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#c4d6ed), to(#2b5592));
-  background-image: linear-gradient(to bottom right, #c4d6ed, #2b5592);
-}
-
-.service__card.card2 {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#64BBE3), to(#2b5592));
-  background-image: linear-gradient(to bottom left, #64BBE3, #2b5592);
-}
-
-.service__card.card3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#64BBE3), to(#c4d6ed));
-  background-image: linear-gradient(to bottom right, #64BBE3, #c4d6ed);
-}
-
-@media screen and (min-width: 996px) {
-  .service__card--container {
-    margin: 0 auto;
-  }
-  .service__card {
-    max-width: 400px;
-  }
+.img__card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .pricing__container {
@@ -12388,6 +12362,20 @@ nav .nav__ul .nav__item a {
 
 .pricing__card {
   border-radius: 20px;
+  min-width: 300px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pricing__card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.card-header {
+  border-radius: 20px 20px 0px 0px;
 }
 
 .pricing__header {
@@ -12410,5 +12398,14 @@ nav .nav__ul .nav__item a {
 
 .availability__span {
   color: #64BBE3;
+}
+
+.contact {
+  padding: 100px 0;
+  background-color: #2b5592;
+}
+
+.contact-img {
+  height: 500px;
 }
 /*# sourceMappingURL=custom.css.map */

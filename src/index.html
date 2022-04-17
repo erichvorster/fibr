@@ -55,27 +55,27 @@
 
 <section class="cards-1">
     <div class="container">
-        <div class="card__container  text-center row gap-3 my-5 py-4">
-               <div class="cardi card1 col-12 col-lg-6  mx-2 mx-lg-1">
-                   <div class="cardz cardz__content mt-5">
+        <div class="card__container  text-center row gap-3 my-5 py-4 px-3">
+               <div class="cardi card1 col-12 col-md-6 mx-md-1">
+                   <div class="cardz__content mt-5">
                       <h3 class="display-6 pt-4">Super Fast Internet</h3>
                       <p class=" pt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae sint atque a velit necessitatibus voluptatibus ratione, repudiandae rerum minima ipsam.</p>
                       <div class="pt-4">
                         <button type="button" class="button-1">Primary</button>
                       </div> 
-                      <div class="row mt-1 card__img">
+                      <div class="row card__img">
                         <img src="../assets/lost.svg" class="img-fluid " alt="...">
                       </div>
                    </div>
                </div>
-               <div class="cardi card2 col-12 col-lg-6 mx-2 mx-lg-1">
+               <div class="cardi card2 col-12 col-md-6  mx-md-1">
                    <div class="cardz__content mt-5">
                       <h3 class="display-6 pt-4">Stay connected</h3>
                       <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias veritatis reprehenderit fuga repellendus adipisci quibusdam cumque laborum assumenda optio.</p>
                       <div class="pt-4">
                         <button type="button" class="button-3">Primary</button>
                       </div> 
-                      <div class="row mt-1 card__img">
+                      <div class="row card__img">
                         <img src="../assets/podcast.svg" class="img-fluid " alt="...">
                       </div>
                    </div>
@@ -102,32 +102,36 @@
 <!--Cards Images-->
 
 <section>
-   <div class="container p-2">
-       <div class="card__img__container row">
+   <div class="container p-2 my-5">
+       <div class="card__img__container row gap-2">
         <div class="card img__card col-12 m-2" style="width: 26rem;">
-          <div>
-            <img src="../assets/undraw_gaming_re_cma2.svg" class="img-fluid" alt="...">
+          <div class="img__card__img">
+            <img src="../assets/undraw_gaming_re_cma2.svg" class="img-fluid p-3" alt="...">
           </div>
-          <div class="card-body img__card__content">
+          <div class="img__card__content">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a  class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card img__card col-12 m-2" style="width: 26rem;">
-          <img src="../assets/undraw_real_time_sync_re_nky7.svg" class="img-fluid" alt="...">
-          <div class="card-body img__card__content">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a  class="btn btn-primary">Go somewhere</a>
+            <button type="button" class="button-1 mx-2">Pricing</button>
           </div>
         </div>
         <div class="card img__card col-12 m-2" style="width: 26rem;">
-          <img src="../assets/undraw_working_late_re_0c3y.svg" class="img-fluid" alt="...">
-          <div class="card-body img__card__content">
+          <div class="img__card__img">
+            <img src="../assets/undraw_real_time_sync_re_nky7.svg" class="img-fluid p-3" alt="...">
+          </div>
+          <div class="img__card__content">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a  class="btn btn-primary">Go somewhere</a>
+            <button type="button" class="button-1 mx-2">Pricing</button>
+          </div>
+        </div>
+        <div class="card img__card col-12 m-2" style="width: 26rem;">
+          <div class="img__card__img">
+            <img src="../assets/undraw_working_late_re_0c3y.svg" class="img-fluid p-3" alt="...">
+          </div>
+          <div class=" img__card__content">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button type="button" class="button-1 mx-2">Pricing</button>
           </div>
         </div>
        </div>
@@ -144,10 +148,9 @@
             <p class="pricing__paragraph fs-5 pt-4">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
           </div>
         </header>
-      
-          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center pt-5">
-            <div class="col">
-              <div class="card pricing__card mb-4  shadow-sm">
+          <div class="row mb-3 text-center pt-5">
+            <div class="col-12 col-lg-4">
+              <div class="card pricing__card  mb-4  shadow-sm">
                 <div class="card-header pricing__header py-3">
                   <h4 class="my-0 fw-normal">10 MB/S</h4>
                 </div>
@@ -163,8 +166,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card pricing__card mb-4  shadow-sm">
+            <div class="col-12 col-lg-4">
+              <div class="card pricing__card  mb-4  shadow-sm">
                 <div class="card-header py-3">
                   <h4 class="my-0 fw-normal">50 MB/S</h4>
                 </div>
@@ -180,7 +183,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-4">
               <div class="card pricing__card mb-4  shadow-sm ">
                 <div class="card-header py-3 ">
                   <h4 class="my-0 fw-normal">100 MB/S</h4>
@@ -253,7 +256,45 @@
         </div>
       </div>
     </footer>
+
+    <!--CONTACT-->
+
+<section class="contact ">
+  <h2 class="display-4 text-light text-center pb-5">Contact Us</h2>
+  <div class="container bg-light border rounded p-2">
+    <div class="row">
+      <div class="col-12 col-md-5 ">
+       <div class="contact-img rounded">
+       </div>
+      </div>
+      <div class="col-12 col-md-7 p-4 pt-md-5 pt-md-0">
+        <h3 class="display-6 pt-5">Get in Touch</h3>
+        <p class="lead">Don't be shy, say hi</p>
+        <div class="contact-inputs">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Contact number</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-outline-success">Secondary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
   
+
       
 
     
