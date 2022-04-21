@@ -326,6 +326,41 @@ nav{
     color:$blue;
 }
 
+
+//BUTTONS
+
+.buttons__container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius:20px;
+}
+.buttons__box__container{
+    
+}
+
+.buttons__button{
+    margin:0 20px;
+}
+
+.button__button--active{
+    transform: translateY(-30px);
+}
+
+.buttons__content__container{
+    display: flex;
+}
+
+.button__content--active{
+    display:block;
+    }
+
+
+
+
+
 //IMAGE CARDS
 
 .card__img__container{
@@ -427,8 +462,19 @@ nav{
 
 .contact {
     padding: 100px 0;
-    background-color: $blue;
+    background-color: $lightBlue;
+  }
+
+  .contact__container{
+      border-radius: 50px;
+  }
+
+  .contact__img__col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .contact-img {
-    height: 500px;
+    max-height: 400px;
   }
+
