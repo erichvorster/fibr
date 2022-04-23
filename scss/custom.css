@@ -12283,119 +12283,106 @@ nav .nav__ul .nav__item a {
   color: #2b5592;
 }
 
-.buttons__container {
+.buttons__header {
+  color: #2b5592;
+}
+
+.features__container {
+  background-color: #64BBE3;
+  border-radius: 10px;
+  max-width: 800px;
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+.button:focus {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.features__buttons__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 20px;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 
-.buttons__button {
-  margin: 0 20px;
+.button {
+  margin: 0px 10px;
+  border: none;
+  background: #2b5592;
+  border-radius: 999px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  width: 200px;
+  height: 50px;
+  word-break: break-word;
+  border: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.button__button--active {
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-}
-
-.buttons__content__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.button__content--active {
-  display: block;
-}
-
-.button__hidden {
+.feature__content {
   display: none;
 }
 
-.card__img__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.feature__content__active {
+  display: block;
+  padding: 40px 80px;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 
-.img__card {
-  min-height: 36rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1rem 0;
-  max-height: 32rem;
-  border-radius: 20px;
-  border: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b5592), to(#64BBE3));
-  background-image: linear-gradient(to bottom, #2b5592, #64BBE3);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.feature__content h3, .feature__content .h3, p {
+  color: #c4d6ed;
 }
 
-.img__card .img__card__img {
-  width: 20rem;
+.service__container {
+  min-height: 500px;
+}
+
+.service__img {
+  max-width: 600px;
   height: auto;
 }
 
-.img__card .img__card__img img {
+.service__img img {
   width: 100%;
-  height: auto;
+  border-radius: 10px;
 }
 
-.img__card .img__card__content {
+.service__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 200px;
-  color: white;
-}
-
-.img__card:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  height: 100%;
+  padding: 20px;
 }
 
 .pricing__container {

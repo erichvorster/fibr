@@ -118,13 +118,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-var buttons = document.querySelectorAll('.buttons__button');
-var buttonContent = document.querySelectorAll('.button__content');
-var buttonContainer = document.querySelector('.button__container');
-buttons.addEventListener('click', function (e) {
-  console.log('fuck');
+var buttonsContainer = document.querySelector(".features__buttons__container");
+var featureButton = document.querySelectorAll(".feature__button");
+var featureContent = document.querySelectorAll(".feature__content");
+buttonsContainer.addEventListener("click", function (e) {
+  var clicked = e.target.closest(".features__button"); // Guard clause
+
+  if (!clicked) return; // Remove active classes
+
+  featureButton.forEach(function (btn) {
+    return btn.classList.remove("button__active");
+  });
+  featureContent.forEach(function (cnt) {
+    return cnt.classList.remove("feature__content__active");
+  }); // Activate tab
+
+  clicked.classList.add("button__active"); // Activate content area
+
+  document.querySelector(".feature__content--".concat(clicked.dataset.tab)).classList.add("feature__content__active");
 });
-},{}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -152,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51345" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63167" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -328,5 +341,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
