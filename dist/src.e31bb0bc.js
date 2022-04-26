@@ -118,18 +118,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 var buttonsContainer = document.querySelector(".features__buttons__container");
 var featureButton = document.querySelectorAll(".feature__button");
 var featureContent = document.querySelectorAll(".feature__content");
@@ -149,31 +137,25 @@ buttonsContainer.addEventListener("click", function (e) {
 
   document.querySelector(".feature__content--".concat(clicked.dataset.tab)).classList.add("feature__content__active");
 }); //Lazy Loading Images
-
-var imgs = document.querySelectorAll("img[data-src]");
-
-var loadImg = function loadImg(entries, observer) {
-  var _entries = _slicedToArray(entries, 1),
-      entry = _entries[0];
-
-  console.log(entry);
-  if (!entry.isIntersecting) return; //Replace src with data
-
-  entry.target.src = entry.target.dataset.src;
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("lazy-img");
-  });
-  observer.unobserve(entry.target);
-};
-
-var imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: "200px"
-});
-imgs.forEach(function (img) {
-  return imgObserver.observe(img);
-}); ////////Slider Section
+// const imgs = document.querySelectorAll("img[data-src]");
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
+//   console.log(entry);
+//   if (!entry.isIntersecting) return;
+//   //Replace src with data
+//   entry.target.src = entry.target.dataset.src;
+//   entry.target.addEventListener("load", function () {
+//     entry.target.classList.remove("lazy-img");
+//   });
+//   observer.unobserve(entry.target);
+// };
+// const imgObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: "200px",
+// });
+// imgs.forEach((img) => imgObserver.observe(img));
+////////Slider Section
 
 var slider = function slider() {
   var slides = document.querySelectorAll(".slide");
@@ -279,7 +261,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55971" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58336" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

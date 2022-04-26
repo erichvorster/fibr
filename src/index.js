@@ -27,31 +27,31 @@ buttonsContainer.addEventListener("click", function (e) {
 
 //Lazy Loading Images
 
-const imgs = document.querySelectorAll("img[data-src]");
+// const imgs = document.querySelectorAll("img[data-src]");
 
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
-  console.log(entry);
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
+//   console.log(entry);
 
-  if (!entry.isIntersecting) return;
+//   if (!entry.isIntersecting) return;
 
-  //Replace src with data
-  entry.target.src = entry.target.dataset.src;
+//   //Replace src with data
+//   entry.target.src = entry.target.dataset.src;
 
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("lazy-img");
-  });
+//   entry.target.addEventListener("load", function () {
+//     entry.target.classList.remove("lazy-img");
+//   });
 
-  observer.unobserve(entry.target);
-};
+//   observer.unobserve(entry.target);
+// };
 
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: "200px",
-});
+// const imgObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: "200px",
+// });
 
-imgs.forEach((img) => imgObserver.observe(img));
+// imgs.forEach((img) => imgObserver.observe(img));
 
 ////////Slider Section
 
