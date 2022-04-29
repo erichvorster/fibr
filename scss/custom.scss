@@ -13,6 +13,7 @@ box-sizing: border-box;
 
 body{
     font-family:'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 //NAV
 
@@ -21,26 +22,27 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height:8vh;
-  
+  background-color: $darkBlue;
+  color:$lightBlue;
 
 .speed{
     font-size: 2rem;
 }
 
   .nav__ul{
-        position: absolute;
-        right:0px;
-        height:92vh;
-        top:8vh;
-        background-color: green;
-        display: flex;
-        flex-direction: column;
+        // position: absolute;
+        // right:0px;
+        // height:92vh;
+        // top:8vh;
+        // background-color: green;
+         display: flex;
+        // flex-direction: column;
         align-items: center;
         width:50%;
-        transform: translateX(110%);
-        transition: transform 0.5s ease-in;
-        justify-content: space-around;
-        align-items: center;
+        // transform: translateX(110%);
+        // transition: transform 0.5s ease-in;
+        // justify-content: space-around;
+        // align-items: center;
 
 
       .nav__item{
@@ -54,43 +56,44 @@ nav{
   }
 }
 
+.burger{
+  display:none;
+
+  .line{
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 5px; 
+  }
+}
+
 @media screen and (min-width:768px){
     
     .nav__ul{
         
-        position: static;
+        display: block;
 
     }
 
-
-    .burger{
-        display: none;
-    }
 
 }
 
-.burger{
-    
 
-    .line{
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        margin: 5px; 
-    }
-}
 
 
 //HERO
 
 .hero{
-    background-image: linear-gradient(to bottom,$blue,$lightBlue);
+    height:90vh;
+    background-image: linear-gradient(to bottom,$darkBlue,$black);
     color:$white;
     display: flex;
     justify-content: center;
 }
 
 .hero__content{
+ 
+
    .hero__header{
      font-size: 2rem;
    }
@@ -113,10 +116,10 @@ nav{
 
 
 .button-1 {
-  background: $blue;
+  background: $darkBlue;
   border-radius: 999px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: $lightBlue;
   cursor: pointer;
   font-family: "poppins", sans-serif;
   font-size: 16px;
@@ -131,7 +134,7 @@ nav{
   width: 200px;
   height:50px;
   word-break: break-word;
-  border: 0;
+  border: 2px solid $lightBlue;
   transition: all 0.1s ease;
 }
 
@@ -139,6 +142,7 @@ nav{
     transform: scale(105%);
     background-color: $lightBlue;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    color:$black;
 }
 
 .button-2 {
@@ -200,7 +204,7 @@ nav{
 //Learn more button
 
 .learn-more {
-  color: $dark;
+  color: $blue;
   font-size: 0.8rem;
   text-decoration: none;
   margin-top: 1em;
@@ -234,6 +238,10 @@ nav{
     transform: translateX(120%);
   }
 
+  &:hover{
+    color:$blue;
+  }
+
   &:hover:before {
     transform: scaleX(0.3);
   }
@@ -251,15 +259,15 @@ nav{
 
 .hero__link{
     text-decoration: none;
-    color:$white;
+    color:$lightBlue;
 }
 .hero__link:hover{
     text-decoration: none;
-    color:$white;
+    color:$lightBlue;
 
     .fa-arrow-right{
         transform: translateX(5px);
-        color:$white;
+        color:$lightBlue;
         transition: all 0.2s ease ;
     }
 }
@@ -272,7 +280,7 @@ nav{
 @media screen and (min-width:996px){
 
     .hero{
-        height:80vh;
+        height:85vh;
         display:flex;
         align-items: center;
     }
@@ -285,6 +293,7 @@ nav{
 
         .hero__sub__header{
             font-size:1.5rem;
+          
         }
     
     }
@@ -303,9 +312,11 @@ nav{
 }
 .cardi{
    transition: all 0.3s ease;
-   min-width: 400px;
-   max-width:700px;
-   max-height:650px;
+   
+}
+
+.cardi div p{
+  color:$white;
 }
 .cardi:hover{
    transform: translateY(-5px);
@@ -316,16 +327,23 @@ nav{
 
 .card1{
    
-    background-image: linear-gradient(to bottom,$lightBlue,$blue);
+    background-image: linear-gradient(to bottom,$darkBlue,$blue);
     border-radius: 20px;
     color:white;
     
+    h3{
+      color:$lightBlue;
+    }
 }
 .card2{
     
-    background-image: linear-gradient(to bottom,$blue,$lightBlue);
+    background-image: linear-gradient(to bottom,$darkBlue,$blue);
     border-radius: 20px;
     color:white;
+
+    h3{
+      color:$lightBlue;
+    }
     
 }
 
@@ -358,33 +376,56 @@ nav{
 
 
 
+
+
+
+
 /////////  BANNER
+
+.banner__1{
+  background-color:white; 
+  min-height:40vh;
+  color:$blue;
+}
 .banner__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
+    max-width: 50rem;
 }
-.banner__1{
-    background-color:$white; 
-    min-height:40vh;
-    color:$blue;
+
+.banner__content p{
+  color:$white;
+} 
+.banner__img{
+  height:15rem;
+  width:auto;
 }
+
+
+
+
+
 
 
 ////////// FEATURES
 
+.features{
+  background-color: $darkBlue;
+}
+
 .features__header{
-    color:$blue;
+    color:$lightBlue;
+   
 }
 
 .features__sub__header{
-  margin-left:20rem;
+  color:$white;
 }
 
 .features__container{
-    background-color: $lightBlue;
+    background-color: white;
     border-radius: 10px;
     max-width:800px;
     min-height:300px;
@@ -394,9 +435,6 @@ nav{
 .button:focus{
     transform: translateY(-10px);
 }
-
-
-
 
 .features__buttons__container{
     display: flex;
@@ -436,19 +474,77 @@ nav{
 
 .feature__content__active {
     display: block;
-    padding:40px 80px;
+    padding:40px 30px;
     transform: translateY(-25px);
-    
 }
 
 .feature__content h3,p{
-    color:$white;
+    color:$darkBlue
+}
+
+@media screen and (min-width:768px){
+
+    
+ 
+}
+
+@media screen and (min-width:996px){
+
+  .feature__content__active {
+    
+    padding:40px 80px;
+    
+}
+
+  .features__header{
+    margin-left:7rem
+   }
+
+  .features__sub__header{
+    margin-left:7rem
+   }
+  
 }
 
 
-///////////SERVICES
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////SERVICES]
+
+.services{
+  
+}
+
+.service__headers{
+   h3{
+     color:$blue;
+   }
+   p{
+     color:$blue;
+   }
+}
 
 .services__container{
     min-height: 500px;
@@ -468,6 +564,7 @@ nav{
     
 }
 
+
 .service__content{
     display: flex;
     justify-content: center;
@@ -476,54 +573,40 @@ nav{
     padding:20px;
 }
 
+
+
 .lazy-img{
     // filter:blur(20px)
 }
 
 
-//PRICING
-.pricing__container{
-    background-color: $white;
-    
-}
-.pricing__card{
-  border-radius:20px;
-  min-width: 300px;
-  transition:all 0.3s ease;
-}
-.pricing__card:hover{
-    transform: translateY(-5px);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.card-header{
-    border-radius: 20px 20px 0px 0px;
-}
-.pricing__header{
-    color:$blue;
-}
-
-.pricing__paragraph{
-    color:$blue;
-}
-.pricing__content{
-    
-    border-radius: 0 0 20px 20px;
-}
-
 
 ////////////REVIEWS
 
+.reviews{
+  background-color: $darkBlue;
+}
+
+.section__title{
+  h3{
+    color:$lightBlue;
+  }
+  p{
+    color:$white;
+  }
+}
+
+
 .slider {
     max-width: 60rem;
-    height: 30rem;
+    height: 20rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-color: $lightBlue;
+    background-color: white;
     border-radius: 20px;
   }
   
@@ -531,8 +614,7 @@ nav{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 30rem;
-  
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -638,11 +720,10 @@ nav{
   }
   
   .review__author {
-    margin-left: 3rem;
+    margin-left: 2rem;
     font-style: normal;
-  
     display: grid;
-    grid-template-columns: 6.5rem 1fr;
+    grid-template-columns: 3rem 1fr;
     column-gap: 2rem;
   }
   
@@ -653,19 +734,20 @@ nav{
   }
   
   .review__name {
-    
-    
     align-self: end;
     margin: 0;
   }
   
   .review__location {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color:$blue;
   }
   
-  .section__title--testimonials {
-    margin-bottom: 4rem;
-  }
+  
+
+
+
+
 
 
 //AVAILABILITY
@@ -680,16 +762,25 @@ nav{
     color:$lightBlue;
 }
 
+.availability__container{
+  
+
+  input{
+    margin: 0 auto;
+  }
+}
+
 //Contact
 
 
 .contact {
-    padding: 100px 0;
-    background-color: $lightBlue;
+    padding: 100px;
+    background-color: white;
   }
 
   .contact__container{
-      border-radius: 50px;
+      border-radius: 20px;
+      background-color: $darkBlue;
   }
 
   .contact__img__col{
@@ -698,6 +789,45 @@ nav{
     align-items: center;
   }
   .contact-img {
-    max-height: 400px;
+    max-height: 550px;
+    border-radius:20px;
   }
 
+
+//PRICING
+.pricing__container{
+  background-image: linear-gradient(to bottom,$darkBlue,$black);
+  
+}
+.pricing__card{
+border-radius:20px;
+min-width: 300px;
+transition:all 0.3s ease;
+text-align: start;
+}
+.pricing__card:hover{
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.card-header{
+  border-radius: 20px 20px 0px 0px;
+}
+.pricing__header{
+  color:$blue;
+}
+
+.pricing__paragraph{
+  color:$white;
+  max-width:50rem;
+  margin:0 auto;
+}
+.pricing__content{
+  
+  border-radius: 0 0 20px 20px;
+}
+
+.card__label{
+  color:$blue;
+   
+}
