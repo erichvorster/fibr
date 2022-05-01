@@ -12743,5 +12743,32 @@ nav .nav__ul .nav__item a {
   color: #45a29e;
 }
 
+.hero__services {
+  height: 90vh;
+  color: #c5c6c7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__content__services .hero__header__services {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #45a29e;
+}
+
+.hero__content__services p {
+  color: #1f2833;
+  letter-spacing: 0.8px;
+}
+
+.hero__img__services img {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 
 /*# sourceMappingURL=/custom.2997abcf.css.map */

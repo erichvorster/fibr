@@ -1,6 +1,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import './responsive';
 @import './variables';
+@import './services';
 
 
 
@@ -830,4 +831,39 @@ text-align: start;
 .card__label{
   color:$blue;
    
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.hero__services{
+  height:90vh;
+  color:$white;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__content__services{
+
+
+ .hero__header__services{
+   font-size: 3rem;
+   font-weight: 700;
+   color: $blue;
+   
+ }
+
+ p{
+  color:$darkBlue;
+  letter-spacing: 0.8px;
+ }
+}
+
+.hero__img__services{
+ 
+
+  img{
+      max-width: 80%;
+      margin: 0 auto;
+  }
 }
