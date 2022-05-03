@@ -867,3 +867,100 @@ text-align: start;
       margin: 0 auto;
   }
 }
+
+//Popular plan
+
+.popular__plan{
+  background-image: linear-gradient(to bottom,$darkBlue,$black);
+}
+
+.plan__container{
+ margin:0 auto;
+}
+
+.popular__content{
+  h3{
+    color:lightblue;
+    
+  }
+}
+
+.popular__card{
+max-width:30rem;
+}
+.plan__img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.plan__text{
+  display: flex;
+  
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pricing__content{
+
+  
+}
+
+
+//SPECIAL
+
+.special__header{
+text-align: center;
+
+}
+.special__container{
+  
+}
+
+.special{
+  min-width: 20rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+.special__img{
+    max-width:10rem;
+    max-height:auto;
+  
+}
+
+
+//Switch
+.switch{
+  background-color: $darkBlue;
+  height:80vh;
+}
+.switch__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  h3{
+    color:lightblue;
+  }
+  p{
+    color:white;
+  }
+}
+
+.switch__img{
+  max-width:30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img{
+    width:100%;
+   
+  }
+}

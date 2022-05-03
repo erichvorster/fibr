@@ -12769,4 +12769,120 @@ nav .nav__ul .nav__item a {
   max-width: 80%;
   margin: 0 auto;
 }
+
+.popular__plan {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1f2833), to(#0b0c10));
+  background-image: linear-gradient(to bottom, #1f2833, #0b0c10);
+}
+
+.plan__container {
+  margin: 0 auto;
+}
+
+.popular__content h3, .popular__content .h3 {
+  color: lightblue;
+}
+
+.popular__card {
+  max-width: 30rem;
+}
+
+.plan__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.plan__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.special__header {
+  text-align: center;
+}
+
+.special {
+  min-width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.special__img {
+  max-width: 10rem;
+  max-height: auto;
+}
+
+.switch {
+  background-color: #1f2833;
+  height: 80vh;
+}
+
+.switch__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.switch__content h3, .switch__content .h3 {
+  color: lightblue;
+}
+
+.switch__content p {
+  color: white;
+}
+
+.switch__img {
+  max-width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switch__img img {
+  width: 100%;
+}
 /*# sourceMappingURL=custom.css.map */
