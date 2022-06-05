@@ -17,76 +17,138 @@ body{
     overflow-x: hidden;
 }
 //NAV
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 8vh;
+}
 
-nav{
-  display:flex;
+.logo {
+  height: 40px;
+  width: 40px;
+  z-index: 4;
+
+  h3{
+    color:$darkPurple;
+
+  }
+}
+.nav-links {
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height:8vh;
-  background-color: $darkBlue;
-  color:$lightBlue;
-
-.speed{
-    font-size: 2rem;
+  width: 40%;
+  z-index: 2;
+  padding-top: 8px;
 }
 
-  .nav__ul{
-        // position: absolute;
-        // right:0px;
-        // height:92vh;
-        // top:8vh;
-        // background-color: green;
-         display: flex;
-        // flex-direction: column;
-        align-items: center;
-        width:50%;
-        // transform: translateX(110%);
-        // transition: transform 0.5s ease-in;
-        // justify-content: space-around;
-        // align-items: center;
+.nav-links li {
+  list-style: none;
+ 
+}
+.nav-links a {
+  color:$darkPurple;
+}
+.nav-links a:hover{
+  color:$orange;
+}
 
+.nav-links li:hover {
+  list-style: none;
+}
 
-      .nav__item{
-          list-style: none;
-          
-          a{
-              text-decoration: none;
-              color:black;
-          }
-      }
+.switch {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: darkgrey;
+  position: relative;
+}
+
+.switch:after {
+  content: "";
+  position: absolute;
+  background-color: $orange;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -8px;
+  transition: 0.3s;
+}
+
+.switch:hover {
+  color: black;
+  transition: 0.3s;
+}
+.switch:hover:after {
+  width: 100%;
+  color: black;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-links {
+    width: 60%;
   }
 }
 
-.burger{
-  display:none;
-
-  .line{
-      width: 25px;
-      height: 3px;
-      background-color: black;
-      margin: 5px; 
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(150%);
+    transition: transform 0.5s ease-in;
+    overflow: hidden;
+  }
+  .nav-links li {
+    opacity: 0;
+    margin-right: 7%;
+  }
+  .burger {
+    display: block;
   }
 }
 
-@media screen and (min-width:768px){
-    
-    .nav__ul{
-        
-        display: block;
-
-    }
-
-
+.nav-active {
+  transform: translate(0%);
 }
 
-
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 
 
 //HERO
 
 .hero{
     height:90vh;
-    background-image: linear-gradient(to bottom,$darkBlue,$black);
+    background-image: linear-gradient(to bottom,$pink,$yellow);
     color:$white;
     display: flex;
     justify-content: center;
@@ -97,6 +159,8 @@ nav{
 
    .hero__header{
      font-size: 2rem;
+     letter-spacing: 0.1rem;
+     
    }
    .hero__sub__header{
        font-size:1rem;
@@ -117,10 +181,11 @@ nav{
 
 
 .button-1 {
-  background: $darkBlue;
+  background: $purple;
   border-radius: 999px;
+  border:none;
   box-sizing: border-box;
-  color: $lightBlue;
+  color: white;
   cursor: pointer;
   font-family: "poppins", sans-serif;
   font-size: 16px;
@@ -135,22 +200,20 @@ nav{
   width: 200px;
   height:50px;
   word-break: break-word;
-  border: 2px solid $lightBlue;
   transition: all 0.1s ease;
 }
 
 .button-1:hover{
     transform: scale(105%);
-    background-color: $lightBlue;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    color:$black;
+    color:$darkPurple;
 }
 
 .button-2 {
-  background: $lightBlue;
+  background: white;
   border-radius: 999px;
   box-shadow:0 10px 20px -10px;
-  color: #FFFFFF;
+  color: $purple;
   cursor: pointer;
   font-family:  "poppins", sans-serif;
   font-size: 16px;
@@ -170,7 +233,8 @@ nav{
 }
 .button-2:hover{
     transform: scale(105%);
-    background-color: $blue;
+    background-color: $purple;
+    color:white;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -205,7 +269,7 @@ nav{
 //Learn more button
 
 .learn-more {
-  color: $blue;
+  color: $darkPurple;
   font-size: 0.8rem;
   text-decoration: none;
   margin-top: 1em;
@@ -222,7 +286,7 @@ nav{
   &:after {
     position: absolute;
     content: "";
-    border-bottom: 3px solid $blue;
+    border-bottom: 3px solid $darkPurple;
     border-radius: 1em;
     bottom: 0.3em;
     transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.265, 1);
@@ -240,7 +304,7 @@ nav{
   }
 
   &:hover{
-    color:$blue;
+    color:$purple;
   }
 
   &:hover:before {
@@ -255,21 +319,25 @@ nav{
 .hero__header{
     font-weight: 700;
     letter-spacing: 3px;
-    color:$lightBlue;
+    color:$darkPurple;
+}
+
+.hero__sub__header{
+  color:$darkPurple;
 }
 
 .hero__link{
     text-decoration: none;
-    color:$lightBlue;
+    color:$purple;
 }
 .hero__link:hover{
     text-decoration: none;
-    color:$lightBlue;
+    color:$darkPurple;
 
     .fa-arrow-right{
         transform: translateX(5px);
-        color:$lightBlue;
-        transition: all 0.2s ease ;
+        color:$darkPurple;
+        transition: all 0.2s ease-in-out ;
     }
 }
 
@@ -328,23 +396,26 @@ nav{
 
 .card1{
    
-    background-image: linear-gradient(to bottom,$darkBlue,$blue);
+    background-image: linear-gradient(to bottom,$purple,$cream);
     border-radius: 20px;
     color:white;
     
     h3{
-      color:$lightBlue;
+      color:white;
     }
+
+   
 }
 .card2{
     
-    background-image: linear-gradient(to bottom,$darkBlue,$blue);
+    background-image: linear-gradient(to bottom,$blue,$green);
     border-radius: 20px;
     color:white;
 
     h3{
-      color:$lightBlue;
+      color:white;
     }
+   
     
 }
 
@@ -386,7 +457,7 @@ nav{
 .banner__1{
   background-color:white; 
   min-height:40vh;
-  color:$blue;
+  color:$purple;
 }
 .banner__container{
     display: flex;
@@ -396,8 +467,11 @@ nav{
     max-width: 50rem;
 }
 
-.banner__content p{
-  color:$white;
+.banner__content {
+  p{
+    color:$darkPurple;
+    max-width: 30rem;
+  }
 } 
 .banner__img{
   height:15rem;
@@ -413,11 +487,11 @@ nav{
 ////////// FEATURES
 
 .features{
-  background-color: $darkBlue;
+  background-color: $purple;
 }
 
 .features__header{
-    color:$lightBlue;
+    color:white;
    
 }
 
@@ -446,7 +520,7 @@ nav{
 .button{
   margin: 0px 10px;
   border:none; 
-  background: $blue;
+  background: $darkPurple;
   border-radius: 999px;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -470,6 +544,13 @@ nav{
 
 .feature__content{
     display:none;
+     .feature__content__header{
+       color:$orange;
+     }
+
+     .feature__content__paragraph{
+       color:$darkPurple;
+     }
     
 }
 
@@ -540,7 +621,7 @@ nav{
 
 .service__headers{
    h3{
-     color:$blue;
+     color:$darkPurple
    }
    p{
      color:$blue;
@@ -572,6 +653,14 @@ nav{
     flex-direction: column;
     height:100%;
     padding:20px;
+
+    h4{
+      color:$darkPurple;
+    }
+
+    p{
+      color:$purple;
+    }
 }
 
 
@@ -585,15 +674,15 @@ nav{
 ////////////REVIEWS
 
 .reviews{
-  background-color: $darkBlue;
+  background-color: $cream;
 }
 
 .section__title{
   h3{
-    color:$lightBlue;
+    color:$darkPurple;
   }
-  p{
-    color:$white;
+  .section__header{
+    color:$darkPurple;
   }
 }
 
@@ -717,7 +806,7 @@ nav{
   .review__text {
     
     margin-bottom: 3.5rem;
-    color: #666;
+    color: $purple;
   }
   
   .review__author {
@@ -737,6 +826,7 @@ nav{
   .review__name {
     align-self: end;
     margin: 0;
+    color:$darkPurple;
   }
   
   .review__location {
@@ -754,13 +844,13 @@ nav{
 //AVAILABILITY
 
 .availability{
-    background-color: $blue;
+    background-color: $purple;
     color:white;
     text-align: center;
 }
 
 .availability__span{
-    color:$lightBlue;
+    color:$orange;
 }
 
 .availability__container{
@@ -768,6 +858,10 @@ nav{
 
   input{
     margin: 0 auto;
+  }
+
+  P{
+    color:$darkPurple;
   }
 }
 
@@ -797,7 +891,7 @@ nav{
 
 //PRICING
 .pricing__container{
-  background-image: linear-gradient(to bottom,$darkBlue,$black);
+  background-image: linear-gradient(to bottom,$darkPurple,$blue);
   
 }
 .pricing__card{
@@ -811,15 +905,19 @@ text-align: start;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.pricing__card__title{
+  color:$darkPurple;
+}
+
 .card-header{
   border-radius: 20px 20px 0px 0px;
 }
 .pricing__header{
-  color:$blue;
+  color:white;
 }
 
 .pricing__paragraph{
-  color:$white;
+  color:white;
   max-width:50rem;
   margin:0 auto;
 }
@@ -829,8 +927,12 @@ text-align: start;
 }
 
 .card__label{
-  color:$blue;
+  color:$darkPurple;
    
+}
+
+.bi-check-circle-fill{
+  color:$orange;
 }
 
 
@@ -841,6 +943,7 @@ text-align: start;
   color:$white;
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(to bottom,$blue,$green);
 }
 
 .hero__content__services{
@@ -849,7 +952,7 @@ text-align: start;
  .hero__header__services{
    font-size: 3rem;
    font-weight: 700;
-   color: $blue;
+   color: white;
    
  }
 
@@ -871,7 +974,7 @@ text-align: start;
 //Popular plan
 
 .popular__plan{
-  background-image: linear-gradient(to bottom,$darkBlue,$black);
+  background-color:$purple;
 }
 
 .plan__container{
@@ -880,8 +983,7 @@ text-align: start;
 
 .popular__content{
   h3{
-    color:lightblue;
-    
+    color:white;
   }
 }
 
@@ -912,6 +1014,7 @@ max-width:30rem;
 
 .special__header{
 text-align: center;
+color:$darkPurple;
 
 }
 .special__container{
@@ -925,7 +1028,14 @@ text-align: center;
   justify-content: center;
   align-items: center;
   text-align: center;
- 
+  
+  h5{
+    color:$purple;
+  }
+
+  p{
+    color:$darkPurple;
+  }
 }
 
 .special__img{
@@ -937,7 +1047,7 @@ text-align: center;
 
 //Switch
 .switch{
-  background-color: $darkBlue;
+  background-color: $cream;
   height:80vh;
 }
 .switch__content{
@@ -946,10 +1056,10 @@ text-align: center;
   justify-content: center;
   
   h3{
-    color:lightblue;
+    color:$darkPurple;
   }
   p{
-    color:white;
+    color:$darkPurple;
   }
 }
 
@@ -964,6 +1074,7 @@ text-align: center;
    
   }
 }
+
 
 
 //////////////////////////////////////REVIEWS
@@ -1138,4 +1249,9 @@ footer{
 
 .help__info{
   padding-top:15px;
+}
+
+footer{
+  background-color: $orange;
+  color:$white;
 }

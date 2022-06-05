@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../scss/custom.css">
     <title>Pricing</title>
@@ -14,22 +15,28 @@
     
 <!--NAV-->
 
-<nav class="">
-    <div class="nav__logo">
-        <h1><i class="fa-thin fa-rabbit logo"></i>Fibr.</h1>
-    </div>
-    <ul class="nav__ul">
-        <li class="nav__item"><a href="#">Home</a></li>
-        <li class="nav__item"><a href="#">Packages</a></li>
-        <li class="nav__item"><a href="#">About</a></li>
-        <li class="nav__item"><a href="#">Contact</a></li>
-    </ul>
-    <div class="burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-</nav>
+<!--NAV-->
+<div class="container bg-light my-0 px-0 id=home">
+  <nav class="navbar navbar-expand-lg navbar-light py-0 my-0 px-0 ">
+      <div class="container-fluid py-2 ">
+        <div class="logo">
+          <h3>Fibr</h3>
+        </div>
+        <ul class="nav-links">
+          <li> <a href ="#home" class ="switch bg-light ">Home </a></li>
+          <li> <a href ="#projects" class ="switch bg-light">Projects</a></li>
+          <li> <a href ="#about" class ="switch bg-light">About</a></li>
+          <li> <a href ="#services" class ="switch bg-light">Services </a></li>
+          <li> <a href ="#contact" class ="switch bg-light">Contact us</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div> 
+    </nav>
+</div>
 
 
   
@@ -47,7 +54,7 @@
               <div class="card pricing__card mb-4 shadow-sm p-3">
                 <div class="card-body pricing__content">
                 <h6 class="card__label ">Domestic</h6> 
-                  <h1 class="card-title pricing-card-title fw-bold py-3">R499<small class="text-muted fw-light">/mo</small></h1>
+                  <h1 class="card-title pricing__card__title fw-bold py-3">R499<small class="text-muted fw-light">/mo</small></h1>
                   <p class="py-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quibusdam.</p>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li class="py-1"><i class="bi bi-check-circle-fill pe-2"></i>Free installation</li>
@@ -65,7 +72,7 @@
               <div class="card pricing__card mb-4 shadow-sm p-3">
                 <div class="card-body pricing__content">
                 <h6 class="card__label ">Domestic</h6> 
-                  <h1 class="card-title pricing-card-title fw-bold py-3">R799<small class="text-muted fw-light">/mo</small></h1>
+                  <h1 class="card-title pricing__card__title fw-bold py-3">R799<small class="text-muted fw-light">/mo</small></h1>
                   <p class="py-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quibusdam.</p>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li class="py-1"><i class="bi bi-check-circle-fill pe-2"></i>Free installation</li>
@@ -83,7 +90,7 @@
               <div class="card pricing__card mb-4 shadow-sm p-3">
                 <div class="card-body pricing__content">
                 <h6 class="card__label ">Domestic</h6> 
-                  <h1 class="card-title pricing-card-title fw-bold py-3">R1199<small class="text-muted fw-light">/mo</small></h1>
+                  <h1 class="card-title pricing__card__title fw-bold py-3">R1199<small class="text-muted fw-light">/mo</small></h1>
                   <p class="py-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quibusdam.</p>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li class="py-1"><i class="bi bi-check-circle-fill pe-2"></i>Free installation</li>
@@ -172,6 +179,8 @@
     </div>
   </footer>
 </div>
+
+
 
   <script src="./index.js"></script>
 </body>

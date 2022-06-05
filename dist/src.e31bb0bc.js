@@ -12679,6 +12679,23 @@ var _swiper = _interopRequireDefault(require("swiper"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var navSlide = function navSlide() {
+  var burger = document.querySelector(".burger");
+  var nav = document.querySelector(".nav-links");
+  var navLinks = document.querySelectorAll(".nav-links li");
+  burger.addEventListener("click", function () {
+    nav.classList.toggle("nav-active");
+    navLinks.forEach(function (link, index) {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = "navLinkFade 0.5s ease forwards ".concat(index / 7 + 1, "s");
+      }
+    });
+  });
+};
+
+navSlide();
 var buttonsContainer = document.querySelector(".features__buttons__container");
 var featureButton = document.querySelectorAll(".feature__button");
 var featureContent = document.querySelectorAll(".feature__content");
@@ -12820,6 +12837,150 @@ var swiper = new _swiper.default(".mySwiper", {
       spaceBetween: 50
     }
   }
+}); //Nav text animation
+
+gsap.from(".logo", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1
+});
+gsap.from(".nav-links", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1
+}); //Hero nav animation
+
+gsap.from(".hero__header", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.1
+});
+gsap.from(".hero__sub__header", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.2
+});
+gsap.from(".btn-1", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.3
+});
+gsap.from(".hero__link", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.3
+});
+gsap.from(".hero__img", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.3
+}); //Cards animation
+
+gsap.from(".card1", {
+  scrollTrigger: ".cardi",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+});
+gsap.from(".card2", {
+  scrollTrigger: ".cardi",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.5
+});
+gsap.from(".features", {
+  scrollTrigger: ".features__header",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+});
+gsap.from(".services", {
+  scrollTrigger: ".service__content",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+});
+gsap.from(".reviews", {
+  scrollTrigger: ".slider",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+});
+gsap.from(".banner__1", {
+  scrollTrigger: ".banner__content",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+});
+gsap.from(".availability", {
+  scrollTrigger: ".availability__container",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+}); //////////////////////Internet Services page animations
+
+gsap.from(".hero__header", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.1
+});
+gsap.from(".hero__sub__header", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.2
+});
+gsap.from(".btn-1", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.3
+});
+gsap.from(".hero__link", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.3
+});
+gsap.from(".hero__img", {
+  duration: 0.5,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 1.3
 });
 },{"swiper":"../node_modules/swiper/swiper.esm.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -12849,7 +13010,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51702" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54267" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
