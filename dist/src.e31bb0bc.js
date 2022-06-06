@@ -12679,6 +12679,7 @@ var _swiper = _interopRequireDefault(require("swiper"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//Navigation animation and responsive animation
 var navSlide = function navSlide() {
   var burger = document.querySelector(".burger");
   var nav = document.querySelector(".nav-links");
@@ -12695,7 +12696,8 @@ var navSlide = function navSlide() {
   });
 };
 
-navSlide();
+navSlide(); //Features
+
 var buttonsContainer = document.querySelector(".features__buttons__container");
 var featureButton = document.querySelectorAll(".feature__button");
 var featureContent = document.querySelectorAll(".feature__content");
@@ -12714,26 +12716,7 @@ buttonsContainer.addEventListener("click", function (e) {
   clicked.classList.add("button__active"); // Activate content area
 
   document.querySelector(".feature__content--".concat(clicked.dataset.tab)).classList.add("feature__content__active");
-}); //Lazy Loading Images
-// const imgs = document.querySelectorAll("img[data-src]");
-// const loadImg = function (entries, observer) {
-//   const [entry] = entries;
-//   console.log(entry);
-//   if (!entry.isIntersecting) return;
-//   //Replace src with data
-//   entry.target.src = entry.target.dataset.src;
-//   entry.target.addEventListener("load", function () {
-//     entry.target.classList.remove("lazy-img");
-//   });
-//   observer.unobserve(entry.target);
-// };
-// const imgObserver = new IntersectionObserver(loadImg, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: "200px",
-// });
-// imgs.forEach((img) => imgObserver.observe(img));
-////////Slider Section
+}); //Slider Section
 
 var slider = function slider() {
   var slides = document.querySelectorAll(".slide");
@@ -12810,48 +12793,35 @@ var slider = function slider() {
   });
 };
 
-slider(); //Swiper
+slider(); //Google maps
 
-var swiper = new _swiper.default(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 1,
-      spaceBetween: 10
+var map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {
+      lat: -34.397,
+      lng: 150.644
     },
-    "@0.75": {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    "@1.00": {
-      slidesPerView: 3,
-      spaceBetween: 40
-    },
-    "@1.50": {
-      slidesPerView: 4,
-      spaceBetween: 50
-    }
-  }
-}); //Nav text animation
+    zoom: 8
+  });
+}
+
+window.initMap = initMap; //Nav text animation
 
 gsap.from(".logo", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1
+  delay: 0.3
 });
 gsap.from(".nav-links", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1
+  delay: 0.3
 }); //Hero nav animation
 
 gsap.from(".hero__header", {
@@ -12859,41 +12829,41 @@ gsap.from(".hero__header", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.1
+  delay: 0.5
 });
 gsap.from(".hero__sub__header", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.2
+  delay: 0.6
 });
 gsap.from(".btn-1", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3
+  delay: 0.7
 });
 gsap.from(".hero__link", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3
+  delay: 0.8
 });
 gsap.from(".hero__img", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3
+  delay: 0.9
 }); //Cards animation
 
 gsap.from(".card1", {
   scrollTrigger: ".cardi",
   duration: 0.8,
-  y: 30,
+  y: 50,
   opacity: 0,
   ease: "power4",
   delay: 0.3
@@ -12901,12 +12871,13 @@ gsap.from(".card1", {
 gsap.from(".card2", {
   scrollTrigger: ".cardi",
   duration: 0.8,
-  y: 30,
+  y: 50,
   opacity: 0,
   ease: "power4",
-  delay: 0.5
-});
-gsap.from(".features", {
+  delay: 0.4
+}); //Features animation
+
+gsap.from(".features__header", {
   scrollTrigger: ".features__header",
   duration: 0.8,
   y: 30,
@@ -12914,7 +12885,24 @@ gsap.from(".features", {
   ease: "power4",
   delay: 0.3
 });
-gsap.from(".services", {
+gsap.from(".features__sub__header", {
+  scrollTrigger: ".features__header",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.4
+});
+gsap.from(".features__container", {
+  scrollTrigger: ".features__header",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.5
+}); //Services animation
+
+gsap.from(".service__headers", {
   scrollTrigger: ".service__content",
   duration: 0.8,
   y: 30,
@@ -12922,14 +12910,40 @@ gsap.from(".services", {
   ease: "power4",
   delay: 0.3
 });
-gsap.from(".reviews", {
-  scrollTrigger: ".slider",
+gsap.from(".services__container", {
+  scrollTrigger: ".service__content",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.4
+}); //Reviews animation
+
+gsap.from(".section__description", {
+  scrollTrigger: ".section__title",
   duration: 0.8,
   y: 30,
   opacity: 0,
   ease: "power4",
   delay: 0.3
 });
+gsap.from(".section__description", {
+  scrollTrigger: ".section__title",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.4
+});
+gsap.from(".slider", {
+  scrollTrigger: ".section__title",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.5
+}); //Banner animation
+
 gsap.from(".banner__1", {
   scrollTrigger: ".banner__content",
   duration: 0.8,
@@ -12938,7 +12952,7 @@ gsap.from(".banner__1", {
   ease: "power4",
   delay: 0.3
 });
-gsap.from(".availability", {
+gsap.from(".availability__container", {
   scrollTrigger: ".availability__container",
   duration: 0.8,
   y: 30,
@@ -12946,42 +12960,6 @@ gsap.from(".availability", {
   ease: "power4",
   delay: 0.3
 }); //////////////////////Internet Services page animations
-
-gsap.from(".hero__header", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.1
-});
-gsap.from(".hero__sub__header", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.2
-});
-gsap.from(".btn-1", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.3
-});
-gsap.from(".hero__link", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.3
-});
-gsap.from(".hero__img", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.3
-});
 },{"swiper":"../node_modules/swiper/swiper.esm.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -13010,7 +12988,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54267" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60166" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

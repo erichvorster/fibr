@@ -1,5 +1,7 @@
 import Swiper from "swiper";
 
+//Navigation animation and responsive animation
+
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
@@ -21,6 +23,8 @@ const navSlide = () => {
 };
 
 navSlide();
+
+//Features
 
 const buttonsContainer = document.querySelector(
   ".features__buttons__container"
@@ -49,35 +53,7 @@ buttonsContainer.addEventListener("click", function (e) {
     .classList.add("feature__content__active");
 });
 
-//Lazy Loading Images
-
-// const imgs = document.querySelectorAll("img[data-src]");
-
-// const loadImg = function (entries, observer) {
-//   const [entry] = entries;
-//   console.log(entry);
-
-//   if (!entry.isIntersecting) return;
-
-//   //Replace src with data
-//   entry.target.src = entry.target.dataset.src;
-
-//   entry.target.addEventListener("load", function () {
-//     entry.target.classList.remove("lazy-img");
-//   });
-
-//   observer.unobserve(entry.target);
-// };
-
-// const imgObserver = new IntersectionObserver(loadImg, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: "200px",
-// });
-
-// imgs.forEach((img) => imgObserver.observe(img));
-
-////////Slider Section
+//Slider Section
 
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
@@ -165,33 +141,18 @@ const slider = function () {
 };
 slider();
 
-//Swiper
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    "@0.75": {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    "@1.00": {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    "@1.50": {
-      slidesPerView: 4,
-      spaceBetween: 50,
-    },
-  },
-});
+//Google maps
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
+
+window.initMap = initMap;
 
 //Nav text animation
 gsap.from(".logo", {
@@ -199,14 +160,14 @@ gsap.from(".logo", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1,
+  delay: 0.3,
 });
 gsap.from(".nav-links", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1,
+  delay: 0.3,
 });
 
 //Hero nav animation
@@ -215,35 +176,35 @@ gsap.from(".hero__header", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.1,
+  delay: 0.5,
 });
 gsap.from(".hero__sub__header", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.2,
+  delay: 0.6,
 });
 gsap.from(".btn-1", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3,
+  delay: 0.7,
 });
 gsap.from(".hero__link", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3,
+  delay: 0.8,
 });
 gsap.from(".hero__img", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3,
+  delay: 0.9,
 });
 
 //Cards animation
@@ -251,7 +212,7 @@ gsap.from(".hero__img", {
 gsap.from(".card1", {
   scrollTrigger: ".cardi",
   duration: 0.8,
-  y: 30,
+  y: 50,
   opacity: 0,
   ease: "power4",
   delay: 0.3,
@@ -259,12 +220,14 @@ gsap.from(".card1", {
 gsap.from(".card2", {
   scrollTrigger: ".cardi",
   duration: 0.8,
-  y: 30,
+  y: 50,
   opacity: 0,
   ease: "power4",
-  delay: 0.5,
+  delay: 0.4,
 });
-gsap.from(".features", {
+
+//Features animation
+gsap.from(".features__header", {
   scrollTrigger: ".features__header",
   duration: 0.8,
   y: 30,
@@ -272,7 +235,25 @@ gsap.from(".features", {
   ease: "power4",
   delay: 0.3,
 });
-gsap.from(".services", {
+gsap.from(".features__sub__header", {
+  scrollTrigger: ".features__header",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.4,
+});
+gsap.from(".features__container", {
+  scrollTrigger: ".features__header",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.5,
+});
+
+//Services animation
+gsap.from(".service__headers", {
   scrollTrigger: ".service__content",
   duration: 0.8,
   y: 30,
@@ -280,14 +261,42 @@ gsap.from(".services", {
   ease: "power4",
   delay: 0.3,
 });
-gsap.from(".reviews", {
-  scrollTrigger: ".slider",
+gsap.from(".services__container", {
+  scrollTrigger: ".service__content",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.4,
+});
+
+//Reviews animation
+gsap.from(".section__description", {
+  scrollTrigger: ".section__title",
   duration: 0.8,
   y: 30,
   opacity: 0,
   ease: "power4",
   delay: 0.3,
 });
+gsap.from(".section__description", {
+  scrollTrigger: ".section__title",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.4,
+});
+gsap.from(".slider", {
+  scrollTrigger: ".section__title",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.5,
+});
+
+//Banner animation
 gsap.from(".banner__1", {
   scrollTrigger: ".banner__content",
   duration: 0.8,
@@ -296,7 +305,7 @@ gsap.from(".banner__1", {
   ease: "power4",
   delay: 0.3,
 });
-gsap.from(".availability", {
+gsap.from(".availability__container", {
   scrollTrigger: ".availability__container",
   duration: 0.8,
   y: 30,
@@ -306,39 +315,3 @@ gsap.from(".availability", {
 });
 
 //////////////////////Internet Services page animations
-
-gsap.from(".hero__header", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.1,
-});
-gsap.from(".hero__sub__header", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.2,
-});
-gsap.from(".btn-1", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.3,
-});
-gsap.from(".hero__link", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.3,
-});
-gsap.from(".hero__img", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 1.3,
-});

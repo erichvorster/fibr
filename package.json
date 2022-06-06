@@ -4,7 +4,7 @@
   "description": "",
   "main": ".index.js",
   "scripts": {
-    "dev": "parcel ./src/internetService.html",
+    "dev": "parcel ./src/index.html",
     "prebuild": "npx rimraf build",
     "build": "parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir build"
   },

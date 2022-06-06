@@ -4,14 +4,14 @@ gsap.from(".logo", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1,
+  delay: 0.3,
 });
 gsap.from(".nav-links", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1,
+  delay: 0.3,
 });
 
 //Hero animation
@@ -20,28 +20,28 @@ gsap.from(".hero__services", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.1,
+  delay: 0.4,
 });
 gsap.from(".hero__header__services", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.2,
+  delay: 0.5,
 });
 gsap.from(".hero__paragraph__services", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3,
+  delay: 0.6,
 });
 gsap.from(".hero__img__services", {
   duration: 0.5,
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.4,
+  delay: 0.7,
 });
 
 gsap.from(".hero__img", {
@@ -49,7 +49,7 @@ gsap.from(".hero__img", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 1.3,
+  delay: 0.8,
 });
 
 //popular animation
