@@ -12138,7 +12138,6 @@ nav {
 }
 
 .hero {
-  height: 90vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#c49cc6), to(#fbecb4));
   background-image: linear-gradient(to bottom right, #c49cc6, #fbecb4);
   color: #c5c6c7;
@@ -12151,8 +12150,7 @@ nav {
 }
 
 .hero__content .hero__header {
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
 }
 
 .hero__content .hero__sub__header {
@@ -12328,7 +12326,6 @@ nav {
 
 .hero__header {
   font-weight: 700;
-  letter-spacing: 3px;
   color: #3c3c57;
 }
 
@@ -12809,7 +12806,6 @@ nav {
 }
 
 .contact {
-  padding: 100px;
   background-color: white;
 }
 
@@ -12826,22 +12822,10 @@ nav {
   color: white;
 }
 
-.contact__img__col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #map {
-  height: 100%;
+  min-height: 32rem;
   background-color: white;
-  width: 100%;
+  width: auto;
   border-radius: 10px;
 }
 
@@ -12887,7 +12871,6 @@ nav {
 }
 
 .hero__services {
-  height: 90vh;
   color: #c5c6c7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12895,8 +12878,8 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1c64aa), to(#e2f6d9));
-  background-image: linear-gradient(to bottom, #1c64aa, #e2f6d9);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#1c64aa), to(#e2f6d9));
+  background-image: linear-gradient(to bottom right, #1c64aa, #e2f6d9);
 }
 
 .hero__content__services .hero__header__services {
@@ -12998,7 +12981,6 @@ nav {
 
 .switch {
   background-color: #f6dcdf;
-  height: 80vh;
 }
 
 .switch__content {

@@ -147,7 +147,6 @@ nav {
 //HERO
 
 .hero{
-    height:90vh;
     background-image: linear-gradient(to bottom right,$pink,$yellow);
     color:$white;
     display: flex;
@@ -158,8 +157,7 @@ nav {
  
 
    .hero__header{
-     font-size: 2rem;
-     letter-spacing: 0.1rem;
+     font-size: 2.5rem;
      
    }
    .hero__sub__header{
@@ -318,7 +316,6 @@ nav {
 
 .hero__header{
     font-weight: 700;
-    letter-spacing: 3px;
     color:$darkPurple;
 }
 
@@ -863,7 +860,7 @@ nav {
 
 
 .contact {
-    padding: 100px;
+    
     background-color: white;
   }
 
@@ -880,21 +877,28 @@ nav {
     color:white;
   }
 
+  #map{
+    min-height: 32rem;
+    background-color: white;
+    width:auto;
+    border-radius: 10px;
+  }
 
-  .contact__img__col{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+    @media screen and (min-width:768px){
+
+  
+   
+  }
+  
+  @media screen and (min-width:996px){
+  
+    
   }
   
 
-  #map{
-    height: 100%;
-    background-color: white;
-    width:100%;
-    border-radius: 10px;
-  }
+
+
 
 //PRICING
 .pricing__container{
@@ -939,14 +943,16 @@ text-align: start;
 }
 
 
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 .hero__services{
-  height:90vh;
   color:$white;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to bottom,$blue,$green);
+  background-image: linear-gradient(to bottom right,$blue,$green);
 }
 
 .hero__content__services{
@@ -1051,7 +1057,6 @@ color:$darkPurple;
 //Switch
 .switch{
   background-color: $cream;
-  height:80vh;
 }
 .switch__content{
   display: flex;
