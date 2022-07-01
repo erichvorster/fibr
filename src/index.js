@@ -1,5 +1,19 @@
 import Swiper from "swiper";
 
+//Sticky navigation animation
+
+// const navbar = document.querySelector(".navs");
+// let lastScrollY = window.scrollY;
+
+// window.addEventListener("scroll", () => {
+//   if (lastScrollY < window.scrollY) {
+//     navbar.classList.add("nav--hidden");
+//   } else {
+//     navbar.classList.remove("nav--hidden");
+//   }
+//   lastScrollY = window.scrollY;
+// });
+
 //Navigation animation and responsive animation
 
 const navSlide = () => {
@@ -9,7 +23,7 @@ const navSlide = () => {
 
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
-
+    console.log("click");
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
@@ -33,7 +47,7 @@ const featureButton = document.querySelectorAll(".feature__button");
 const featureContent = document.querySelectorAll(".feature__content");
 
 buttonsContainer.addEventListener("click", function (e) {
-  const clicked = e.target.closest(".features__button");
+  const clicked = e.target.closest(".feature__button");
 
   // Guard clause
   if (!clicked) return;
@@ -154,22 +168,6 @@ function initMap() {
 
 window.initMap = initMap;
 
-//Nav text animation
-gsap.from(".logo", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3,
-});
-gsap.from(".nav-links", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3,
-});
-
 //Hero nav animation
 gsap.from(".hero__header", {
   duration: 0.5,
@@ -279,7 +277,7 @@ gsap.from(".section__description", {
   ease: "power4",
   delay: 0.3,
 });
-gsap.from(".section__description", {
+gsap.from(".section__header", {
   scrollTrigger: ".section__title",
   duration: 0.8,
   y: 30,
@@ -314,4 +312,12 @@ gsap.from(".availability__container", {
   delay: 0.3,
 });
 
-//////////////////////Internet Services page animations
+//Contact animation
+gsap.from(".contact", {
+  scrollTrigger: ".contact__container",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3,
+});

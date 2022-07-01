@@ -11966,7 +11966,11 @@ fieldset:disabled .btn {
 
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+}
+
+.navs {
+  background-color: #f8f9fa;
+  z-index: 1002;
 }
 
 nav {
@@ -11980,16 +11984,21 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 8vh;
+  -webkit-transform: translateY(0vh);
+          transform: translateY(0vh);
+}
+
+.nav--hidden {
+  -webkit-transform: translateY(-8vh);
+          transform: translateY(-8vh);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   z-index: 4;
-}
-
-.logo h3, .logo .h3 {
-  color: #3c3c57;
 }
 
 .nav-links {
@@ -12002,20 +12011,17 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   width: 40%;
-  z-index: 2;
+  z-index: 500;
   padding-top: 8px;
+  background-color: #f8f9fa;
+}
+
+.nav-container {
+  background-color: #f8f9fa;
 }
 
 .nav-links li {
   list-style: none;
-}
-
-.nav-links a {
-  color: #3c3c57;
-}
-
-.nav-links a:hover {
-  color: #fb837f;
 }
 
 .nav-links li:hover {
@@ -12025,8 +12031,8 @@ nav {
 .switch {
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: 14px;
-  color: darkgrey;
+  font-size: 12px;
+  color: #212529;
   position: relative;
 }
 
@@ -12043,7 +12049,7 @@ nav {
 }
 
 .switch:hover {
-  color: black;
+  color: #fb837f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -12061,7 +12067,7 @@ nav {
 .burger div {
   width: 25px;
   height: 2px;
-  background-color: black;
+  background-color: #fb837f;
   margin: 5px;
 }
 
@@ -12077,7 +12083,7 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: white;
+    background-color: #e2f6d9;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12088,7 +12094,7 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    width: 100vw;
     -webkit-transform: translateX(150%);
             transform: translateX(150%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -12096,6 +12102,7 @@ nav {
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
     overflow: hidden;
+    z-index: 1000;
   }
   .nav-links li {
     opacity: 0;
@@ -12103,12 +12110,18 @@ nav {
   }
   .burger {
     display: block;
+    float: right;
+  }
+  .switch {
+    font-size: 25px;
+    color: #212529;
   }
 }
 
 .nav-active {
   -webkit-transform: translate(0%);
           transform: translate(0%);
+  z-index: 100;
 }
 
 @-webkit-keyframes navLinkFade {
@@ -12147,19 +12160,27 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
+}
+
+.hero__content {
+  z-index: 1;
 }
 
 .hero__content .hero__header {
   font-size: 2.5rem;
+  z-index: 1;
 }
 
 .hero__content .hero__sub__header {
   font-size: 1rem;
+  z-index: 1;
 }
 
-.hero__img img {
+.hero__img .img-fluid {
   max-width: 80%;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .button-1 {
@@ -12188,6 +12209,7 @@ nav {
   word-break: break-word;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  z-index: 1;
 }
 
 .button-1:hover {
@@ -12196,6 +12218,7 @@ nav {
   -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   color: #3c3c57;
+  z-index: 1;
 }
 
 .button-2 {
@@ -12380,6 +12403,13 @@ nav {
           justify-content: center;
 }
 
+.cards {
+  -webkit-transition: -webkit-box-shadow 0.5s ease;
+  transition: -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+
 .cards div p {
   color: #c5c6c7;
 }
@@ -12484,7 +12514,7 @@ nav {
   margin: 0 auto;
 }
 
-.button:focus {
+.button__active {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
@@ -13195,6 +13225,10 @@ nav {
 
 footer {
   text-align: center;
+}
+
+.footer__content {
+  max-width: 30rem;
 }
 
 @media (max-width: 768px) {

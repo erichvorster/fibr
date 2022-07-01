@@ -12679,6 +12679,17 @@ var _swiper = _interopRequireDefault(require("swiper"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//Sticky navigation animation
+// const navbar = document.querySelector(".navs");
+// let lastScrollY = window.scrollY;
+// window.addEventListener("scroll", () => {
+//   if (lastScrollY < window.scrollY) {
+//     navbar.classList.add("nav--hidden");
+//   } else {
+//     navbar.classList.remove("nav--hidden");
+//   }
+//   lastScrollY = window.scrollY;
+// });
 //Navigation animation and responsive animation
 var navSlide = function navSlide() {
   var burger = document.querySelector(".burger");
@@ -12686,6 +12697,7 @@ var navSlide = function navSlide() {
   var navLinks = document.querySelectorAll(".nav-links li");
   burger.addEventListener("click", function () {
     nav.classList.toggle("nav-active");
+    console.log("click");
     navLinks.forEach(function (link, index) {
       if (link.style.animation) {
         link.style.animation = "";
@@ -12702,7 +12714,7 @@ var buttonsContainer = document.querySelector(".features__buttons__container");
 var featureButton = document.querySelectorAll(".feature__button");
 var featureContent = document.querySelectorAll(".feature__content");
 buttonsContainer.addEventListener("click", function (e) {
-  var clicked = e.target.closest(".features__button"); // Guard clause
+  var clicked = e.target.closest(".feature__button"); // Guard clause
 
   if (!clicked) return; // Remove active classes
 
@@ -12807,22 +12819,7 @@ function initMap() {
   });
 }
 
-window.initMap = initMap; //Nav text animation
-
-gsap.from(".logo", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3
-});
-gsap.from(".nav-links", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3
-}); //Hero nav animation
+window.initMap = initMap; //Hero nav animation
 
 gsap.from(".hero__header", {
   duration: 0.5,
@@ -12927,7 +12924,7 @@ gsap.from(".section__description", {
   ease: "power4",
   delay: 0.3
 });
-gsap.from(".section__description", {
+gsap.from(".section__header", {
   scrollTrigger: ".section__title",
   duration: 0.8,
   y: 30,
@@ -12959,7 +12956,16 @@ gsap.from(".availability__container", {
   opacity: 0,
   ease: "power4",
   delay: 0.3
-}); //////////////////////Internet Services page animations
+}); //Contact animation
+
+gsap.from(".contact", {
+  scrollTrigger: ".contact__container",
+  duration: 0.8,
+  y: 30,
+  opacity: 0,
+  ease: "power4",
+  delay: 0.3
+});
 },{"swiper":"../node_modules/swiper/swiper.esm.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -12988,7 +12994,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56395" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53457" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
