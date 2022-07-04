@@ -118,29 +118,61 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"internetService.js":[function(require,module,exports) {
-//Nav text animation
-gsap.from(".logo", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3
-});
-gsap.from(".nav-links", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3
-}); //Hero animation
+var body = document.body;
+var lastScroll = 0;
+window.addEventListener("scroll", function () {
+  var currentScroll = window.pageYOffset;
 
-gsap.from(".hero__services", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.4
-});
+  if (currentScroll <= 0) {
+    body.classList.remove("scroll-up");
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-up");
+    body.classList.add("scroll-down");
+  } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-down");
+    body.classList.add("scroll-up");
+  }
+
+  lastScroll = currentScroll;
+}); //Navigation animation and responsive animation
+
+var navSlide = function navSlide() {
+  var burger = document.querySelector(".burger");
+  var nav = document.querySelector(".nav-links");
+  var navLinks = document.querySelectorAll(".nav-links li");
+  burger.addEventListener("click", function () {
+    nav.classList.toggle("nav-active");
+    console.log("click");
+    navLinks.forEach(function (link, index) {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = "navLinkFade 0.5s ease forwards ".concat(index / 7 + 1, "s");
+      }
+    });
+  });
+};
+
+navSlide(); //Nav text animation
+// gsap.from(".logo", {
+//   duration: 0.5,
+//   y: 30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 0.3,
+// });
+// gsap.from(".nav-links", {
+//   duration: 0.5,
+//   y: 30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 0.3,
+// });
+//Hero animation
+
 gsap.from(".hero__header__services", {
   duration: 0.5,
   y: 30,
@@ -167,7 +199,8 @@ gsap.from(".hero__img", {
   y: 30,
   opacity: 0,
   ease: "power4",
-  delay: 0.8
+  delay: 0.8,
+  zIndex: 0
 }); //popular animation
 
 gsap.from(".popular__content", {
@@ -297,7 +330,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53457" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54415" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

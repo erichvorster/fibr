@@ -1,18 +1,29 @@
 import Swiper from "swiper";
 
-//Sticky navigation animation
+//Sticky Navigation
 
-// const navbar = document.querySelector(".navs");
-// let lastScrollY = window.scrollY;
+const body = document.body;
+let lastScroll = 0;
 
-// window.addEventListener("scroll", () => {
-//   if (lastScrollY < window.scrollY) {
-//     navbar.classList.add("nav--hidden");
-//   } else {
-//     navbar.classList.remove("nav--hidden");
-//   }
-//   lastScrollY = window.scrollY;
-// });
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove("scroll-up");
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-up");
+    body.classList.add("scroll-down");
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains("scroll-down")
+  ) {
+    body.classList.remove("scroll-down");
+    body.classList.add("scroll-up");
+  }
+  lastScroll = currentScroll;
+});
 
 //Navigation animation and responsive animation
 
@@ -169,7 +180,9 @@ function initMap() {
 window.initMap = initMap;
 
 //Hero nav animation
+
 gsap.from(".hero__header", {
+  zIndex: 0,
   duration: 0.5,
   y: 30,
   opacity: 0,
@@ -177,6 +190,7 @@ gsap.from(".hero__header", {
   delay: 0.5,
 });
 gsap.from(".hero__sub__header", {
+  zIndex: 0,
   duration: 0.5,
   y: 30,
   opacity: 0,
@@ -184,6 +198,7 @@ gsap.from(".hero__sub__header", {
   delay: 0.6,
 });
 gsap.from(".btn-1", {
+  zIndex: 1,
   duration: 0.5,
   y: 30,
   opacity: 0,
@@ -191,6 +206,7 @@ gsap.from(".btn-1", {
   delay: 0.7,
 });
 gsap.from(".hero__link", {
+  zIndex: 1,
   duration: 0.5,
   y: 30,
   opacity: 0,
@@ -198,6 +214,7 @@ gsap.from(".hero__link", {
   delay: 0.8,
 });
 gsap.from(".hero__img", {
+  zIndex: 1,
   duration: 0.5,
   y: 30,
   opacity: 0,

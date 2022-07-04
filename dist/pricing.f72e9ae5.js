@@ -118,20 +118,80 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"pricing.js":[function(require,module,exports) {
-gsap.from(".logo", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3
-});
-gsap.from(".nav-links", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.3
-}); //Pricing animation
+//Navigation animation and responsive animation
+var navSlide = function navSlide() {
+  var burger = document.querySelector(".burger");
+  var nav = document.querySelector(".nav-links");
+  var navLinks = document.querySelectorAll(".nav-links li");
+  burger.addEventListener("click", function () {
+    nav.classList.toggle("nav-active");
+    console.log("click");
+    navLinks.forEach(function (link, index) {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = "navLinkFade 0.5s ease forwards ".concat(index / 7 + 1, "s");
+      }
+    });
+  });
+};
+
+navSlide(); //Features
+
+var buttonsContainer = document.querySelector(".features__buttons__container");
+var featureButton = document.querySelectorAll(".feature__button");
+var featureContent = document.querySelectorAll(".feature__content");
+buttonsContainer.addEventListener("click", function (e) {
+  var clicked = e.target.closest(".feature__button"); // Guard clause
+
+  if (!clicked) return; // Remove active classes
+
+  featureButton.forEach(function (btn) {
+    return btn.classList.remove("button__active");
+  });
+  featureContent.forEach(function (cnt) {
+    return cnt.classList.remove("feature__content__active");
+  }); // Activate tab
+
+  clicked.classList.add("button__active"); // Activate content area
+
+  document.querySelector(".feature__content--".concat(clicked.dataset.tab)).classList.add("feature__content__active");
+}); //Sticky Navigation
+
+var body = document.body;
+var lastScroll = 0;
+window.addEventListener("scroll", function () {
+  var currentScroll = window.pageYOffset;
+
+  if (currentScroll <= 0) {
+    body.classList.remove("scroll-up");
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-up");
+    body.classList.add("scroll-down");
+  } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-down");
+    body.classList.add("scroll-up");
+  }
+
+  lastScroll = currentScroll;
+}); // gsap.from(".logo", {
+//   duration: 0.5,
+//   y: 30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 0.3,
+// });
+// gsap.from(".nav-links", {
+//   duration: 0.5,
+//   y: 30,
+//   opacity: 0,
+//   ease: "power4",
+//   delay: 0.3,
+// });
+//Pricing animation
 
 gsap.from(".pricing__header", {
   duration: 0.5,
@@ -196,7 +256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53457" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54415" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

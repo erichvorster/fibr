@@ -1,255 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<script type="module" src="https://kit.fontawesome.com/b60b6b2da4.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../scss/custom.css">
-  <title>Fibr</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://kit.fontawesome.com/b60b6b2da4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../scss/custom.css" />
+    <title>Fibr</title>
+  </head>
+  <body>
+    <!--NAV-->
 
-    
-<!--NAV-->
-
-<div class="container bg-light my-0 px-0 id=home">
-    <nav class="navbar navbar-expand-lg navbar-light py-0 my-0 px-0 ">
-        <div class="container-fluid py-2 ">
-          <div class="logo">
-            <h3>Fibr</h3>
+    <section class="navs">
+      <div class="container nav-container my-0 px-0 id=home">
+        <nav
+          class="navbar nav-container navbar-expand-lg navbar-light py-0 my-0 px-0"
+        >
+          <div class="container-fluid py-2">
+            <div class="logo">
+              <img src="../assets/wifi-signal.png" alt="" />
+            </div>
+            <ul class="nav-links">
+              <li><a href="index.html" class="switch">Home</a></li>
+              <li>
+                <a href="internetService.html" class="switch">Services</a>
+              </li>
+              <li><a href="pricing.html" class="switch">Pricing</a></li>
+              <li><a href="reviews.html" class="switch">Reviews</a></li>
+              <li><a href="contact.html" class="switch">Contact us</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
           </div>
-          <ul class="nav-links">
-            <li> <a href ="index.html" class ="switch bg-light ">Home</a></li>
-            <li> <a href ="internetService.html" class ="switch bg-light">Services</a></li>
-            <li> <a href ="pricing.html" class ="switch bg-light">Pricing</a></li>
-            <li> <a href ="reviews.html" class ="switch bg-light">Reviews</a></li>
-            <li> <a href ="#contact" class ="switch bg-light">Contact us</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </div> 
-      </nav>
-  </div>
-  
+        </nav>
+      </div>
+    </section>
 
-<!--Review Hero-->
-<section class="pt-5 review__hero">
-    <div class="container ">
+    <!--Review Hero-->
+    <section class="pt-5 review__hero">
+      <div class="container py-5">
         <div class="row review__container">
-            <div class="col review__hero__content">
-                <h2 class="display-6 fw-bold">Probably the best track record you will find!</h2>
-                <p>Whether its supper fast internet speed or great customer service fibr does it all</p>
-            </div>
-            <div class="col review__hero__img">
-                <img class="img-fluid"src="../assets/undraw_reviews_lp8w.svg">
-            </div>
+          <div class="col review__hero__content">
+            <h2 class="display-6 fw-bold">
+              Probably the best track record you will find!
+            </h2>
+            <p>
+              Whether its supper fast internet speed or great customer service
+              fibr does it all
+            </p>
+          </div>
+          <div class="col review__hero__img">
+            <img class="img-fluid" src="../assets/undraw_reviews_lp8w.svg" />
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-
-
-<!--Reviews-->
+    <!--Reviews-->
     <section class="my-5">
-        <div class="testimonial__container container mt-5">
-            <h3 class="text-center display-6 fw-bold">What do our customers think of fibr?</h3>
-            <div class="testimonials mt-5">
-                <div class="review__card card--bg-purple">
-                    <header class="card__header">
-                        <img src="../assets/gamer.png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Daniel Smith</h3>
-                            <p>Gamer</p>
-                        </div>
-                    </header>
-                    <p class="card__lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.?
-                    </p>
-                    <p class="card__quote">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate natus vel nostrum! Vero enim delectus?
-                    </p>
-                </div>
-                <div class="review__card card--bg--grey-blue">
-                    <header class="card__header">
-                        <img src="../assets/man (1).png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Graham Thomas</h3>
-                            <p>Scientist</p>
-                        </div>
-                    </header>
-                    <p class="card__lead text-light">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <p class="card__quote text-light">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate natus vel nostrum!
-                    </p>
-                </div>
-                <div class="review__card ">
-                    <header class="card__header">
-                        <img src="../assets/man (2).png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Lisa Moore</h3>
-                            <p>Gardener</p>
-                        </div>
-                    </header>
-                    <p class="card__lead">
-                        Lorem ipsum dolor sit amet consectetur.
-                    </p>
-                    <p class="card__quote">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate natus vel nostrum! Vero enim delectus neque possimus.
-                </div>
-                <div class="review__card ">
-                    <header class="card__header">
-                        <img src="../assets/man.png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Lex Luther</h3>
-                            <p>Villain</p>
-                        </div>
-                    </header>
-                    <p class="card__lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore deserunt.
-                    </p>
-                    <p class="card__quote">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate natus vel nostrum! Vero enim delectus neque.
-                    </p>
-                </div>
-                <div class="review__card card--bg--black-blue">
-                    <header class="card__header">
-                        <img src="../assets/woman.png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Ruby Jackson</h3>
-                            <p>Film Maker</p>
-                        </div>
-                    </header>
-                    <p class="card__lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore deserun.
-                    </p>
-                    <p class="card__quote">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, hic labore iure vel unde minus voluptate quam dolore recusandae eius! Ab ipsum aliquam ea fugit voluptatibus perspiciatis tempora maiores culpa minima accusantium. Pariatur in voluptas facere non, quo libero quae explicabo mollitia exercitationem! Impedit natus, quis atque vel iusto beatae repudiandae quasi nam iure. Voluptatibus officiis dolores saepe aliquid veritatis?
-                    </p>
-                </div>
-                <div class="review__card card--bg--black-blue">
-                    <header class="card__header">
-                        <img src="../assets/woman.png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Ruby Jackson</h3>
-                            <p>Film Maker</p>
-                        </div>
-                    </header>
-                    <p class="card__lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore deserun.
-                    </p>
-                    <p class="card__quote">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate natus vel nostrum! Vero enim delectus neque possimus provident exercitationem
-                    </p>
-                </div>
-                <div class="review__card card--bg--grey-blue">
-                    <header class="card__header">
-                        <img src="../assets/woman.png" class="card__imgs" alt="card__img">
-                        <div>
-                            <h3>Ruby Jackson</h3>
-                            <p>Film Maker</p>
-                        </div>
-                    </header>
-                    <p class="card__lead text-light">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore deserun.
-                    </p>
-                    <p class="card__quote text-light">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate natus vel nostrum! Vero enim delectus neque possimus provident exercitationem
-                    </p>
-                </div>
-            </div>
+      <div class="testimonial__container container mt-5">
+        <h3 class="text-center display-6 fw-bold">
+          What do our customers think of fibr?
+        </h3>
+        <div class="testimonials mt-5">
+          <div class="review__card card--bg-purple">
+            <header class="card__header">
+              <img
+                src="../assets/gamer.png"
+                class="card__imgs"
+                alt="card__img"
+              />
+              <div>
+                <h3>Daniel Smith</h3>
+                <p>Gamer</p>
+              </div>
+            </header>
+            <p class="card__lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.?
+            </p>
+            <p class="card__quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              cupiditate natus vel nostrum! Vero enim delectus?
+            </p>
+          </div>
+          <div class="review__card card--bg--grey-blue">
+            <header class="card__header">
+              <img
+                src="../assets/man (1).png"
+                class="card__imgs"
+                alt="card__img"
+              />
+              <div>
+                <h3>Graham Thomas</h3>
+                <p>Scientist</p>
+              </div>
+            </header>
+            <p class="card__lead text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="card__quote text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              cupiditate natus vel nostrum!
+            </p>
+          </div>
+          <div class="review__card">
+            <header class="card__header">
+              <img
+                src="../assets/man (2).png"
+                class="card__imgs"
+                alt="card__img"
+              />
+              <div>
+                <h3>Lisa Moore</h3>
+                <p>Gardener</p>
+              </div>
+            </header>
+            <p class="card__lead">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="card__quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              cupiditate natus vel nostrum! Vero enim delectus neque possimus.
+            </p>
+          </div>
+
+          <div class="review__card">
+            <header class="card__header">
+              <img src="../assets/man.png" class="card__imgs" alt="card__img" />
+              <div>
+                <h3>Lex Luther</h3>
+                <p>Villain</p>
+              </div>
+            </header>
+            <p class="card__lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              inventore deserunt.
+            </p>
+            <p class="card__quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              cupiditate natus vel nostrum! Vero enim delectus neque.
+            </p>
+          </div>
+          <div class="review__card card--bg--black-blue">
+            <header class="card__header">
+              <img
+                src="../assets/woman.png"
+                class="card__imgs"
+                alt="card__img"
+              />
+              <div>
+                <h3>Ruby Jackson</h3>
+                <p>Film Maker</p>
+              </div>
+            </header>
+            <p class="card__lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              inventore deserun.
+            </p>
+            <p class="card__quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              hic labore iure vel unde minus voluptate quam dolore recusandae
+              eius! Ab ipsum aliquam ea fugit voluptatibus perspiciatis tempora
+              maiores culpa minima accusantium. Pariatur in voluptas facere non,
+              quo libero quae explicabo mollitia exercitationem! Impedit natus,
+              quis atque vel iusto beatae repudiandae quasi nam iure.
+              Voluptatibus officiis dolores saepe aliquid veritatis?
+            </p>
+          </div>
+          <div class="review__card card--bg--black-blue">
+            <header class="card__header">
+              <img
+                src="../assets/woman.png"
+                class="card__imgs"
+                alt="card__img"
+              />
+              <div>
+                <h3>Ruby Jackson</h3>
+                <p>Film Maker</p>
+              </div>
+            </header>
+            <p class="card__lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              inventore deserun.
+            </p>
+            <p class="card__quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              cupiditate natus vel nostrum! Vero enim delectus neque possimus
+              provident exercitationem
+            </p>
+          </div>
+          <div class="review__card card--bg--grey-blue">
+            <header class="card__header">
+              <img
+                src="../assets/woman.png"
+                class="card__imgs"
+                alt="card__img"
+              />
+              <div>
+                <h3>Ruby Jackson</h3>
+                <p>Film Maker</p>
+              </div>
+            </header>
+            <p class="card__lead text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              inventore deserun.
+            </p>
+            <p class="card__quote text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              cupiditate natus vel nostrum! Vero enim delectus neque possimus
+              provident exercitationem
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--Availabiulity-->
 
     <section class="availability">
-        <div class="container">
-          <div class="availability__container py-5">
-            <h3 class="availability__header display-6">Check availability</h3>
-            <p class="availability__paragraph pt-4 fs-5">Leave us your email address below and we will let you know if <span class="availability__span">fibr</span> is available in your area</p>
-            <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" class="form-control my-5 px-4 w-50" placeholder="Email address">
+      <div class="container">
+        <div class="availability__container py-5">
+          <h3 class="availability__header display-6">Check availability</h3>
+          <p class="availability__paragraph pt-4 fs-5">
+            Leave us your email address below and we will let you know if
+            <span class="availability__span">fibr</span> is available in your
+            area
+          </p>
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          <input
+            id="newsletter1"
+            type="text"
+            class="form-control my-5 px-4 w-50"
+            placeholder="Email address"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <div class="pt-5">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-10 col-sm-12 col-md-5 offset-1 pt-5 px-1">
+            <form>
+              <h5 class="text-start display-6 fw-bold text-white">
+                Subscribe to our newsletter
+              </h5>
+              <p class="text-start text-white">
+                Monthly digest of whats new and exciting from us.
+              </p>
+              <div class="d-flex me-5 footer__content">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  type="text"
+                  class="form-control mx-2"
+                  placeholder="Email address"
+                />
+                <button class="button-1" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-5 pt-5 ml-5 col-sm-6 col-md-3 ps-5">
+            <div class="footer__links">
+              <h5 class="text-start text-purple">Links</h5>
+              <ul class="nav flex-column text-start text-light">
+                <li class="nav-item mb-2">
+                  <a href="./index.html" class="nav-link p-0">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./internetService.html" class="nav-link p-0"
+                    >Services</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./pricing.html" class="nav-link p-0">Pricing</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-5 pt-5 col-sm-6 ps-5 col-md-3">
+            <div class="footer__links">
+              <h5 class="text-start">Follow us on social</h5>
+              <ul class="nav flex-column text-start">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Instagtam</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Facebook</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Twitter</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">linkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
-
-
-
-
-<!--FOOTER-->
-<div>
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-4 offset-1">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of whats new and exciting from us.</p>
-            <div class="d-flex w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="button-1" type="button">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
-  
-      <div class="d-flex justify-content-between py-4 my-4 border-top">
-        <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-
-</body>
-<script src="./index.js"></script>
-
+      </footer>
+    </div>
+  </body>
+  <script src="./index.js"></script>
 </html>
