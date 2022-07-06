@@ -153,6 +153,7 @@ var navSlide = function navSlide() {
         link.style.animation = "navLinkFade 0.5s ease forwards ".concat(index / 7 + 1, "s");
       }
     });
+    burger.classList.toggle("toggle");
   });
 };
 
@@ -330,7 +331,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54415" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53798" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

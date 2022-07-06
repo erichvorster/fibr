@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/custom.2997abcf.css">
     <title>Fibr</title>
-  <script src="/custom.2997abcf.js"></script></head>
+  <script src="/custom.2997abcf.js"></script><script src="/internetService.js"></script></head>
   <body>
     <!--NAV-->
     <section class="navs">
@@ -23,13 +23,21 @@
               <img src="/wifi-signal.8afc9a3c.png" alt="">
             </div>
             <ul class="nav-links">
-              <li><a href="/index.html" class="switch">Home</a></li>
+              <li>
+                <a href="/index.html" class="switch">Home</a>
+              </li>
               <li>
                 <a href="/internetService.html" class="switch">Services</a>
               </li>
-              <li><a href="/pricing.html" class="switch">Pricing</a></li>
-              <li><a href="/reviews.html" class="switch">Reviews</a></li>
-              <li><a href="/contact.html" class="switch">Contact us</a></li>
+              <li>
+                <a href="/pricing.html" class="switch">Pricing</a>
+              </li>
+              <li>
+                <a href="/reviews.html" class="switch">Reviews</a>
+              </li>
+              <li>
+                <a href="/contact.html" class="switch">Contact us</a>
+              </li>
             </ul>
             <div class="burger">
               <div class="line1"></div>
@@ -122,19 +130,19 @@
         <div class="features__container my-3">
           <div class="features__buttons__container">
             <button type="button" class="button feature__button button__active fs-6" data-tab="1">
-              First
+              Load Balancing
             </button>
             <button type="button" class="button feature__button fs-6" data-tab="2">
-              Second
+              Scalability
             </button>
             <button type="button" class="button feature__button fs-6" data-tab="3">
-              Third
+              Access Control
             </button>
           </div>
           <div class="features__content__container pt-3">
             <div class="feature__content feature__content--1 feature__content__active">
               <h3 class="feature__content__header fs-5 fw-bold">
-                First Feature
+                Load Balancing
               </h3>
               <p class="feature__content__paragraph fs-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -144,9 +152,7 @@
               </p>
             </div>
             <div class="feature__content feature__content--2">
-              <h3 class="feature__content__header fs-5 fw-bold">
-                Second Feature
-              </h3>
+              <h3 class="feature__content__header fs-5 fw-bold">Scalability</h3>
               <p class="fs-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Laboriosam sunt beatae iure quis, dolore iste necessitatibus
@@ -157,7 +163,7 @@
             </div>
             <div class="feature__content feature__content--3">
               <h3 class="feature__content__header fs-5 fw-bold">
-                Third Feature
+                Access Control
               </h3>
               <p class="fs-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -176,7 +182,7 @@
     <section class="services my-5">
       <div class="container">
         <div class="service__headers text-center">
-          <h3 class="display-6 fw-bold">All the services</h3>
+          <h3 class="display-6 fw-bold">Super fast network speed</h3>
           <p class="fs-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             nemo!
@@ -191,14 +197,14 @@
           <div class="col-12 col-md-6 service">
             <div class="service__content">
               <h4 class="service__titl fs-5 fw-bold">
-                Internet for the masses
+                Up to 100mb per second speed
               </h4>
               <p class="fs-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae quas voluptatibus doloribus rerum, necessitatibus
                 animi ab adipisci blanditiis. Ab, vero?
               </p>
-              <a class="learn-more" href="/internetService.html">Learn More</a>
+              <a class="learn-more" href="/internetService.html#special">Learn More</a>
             </div>
           </div>
         </div>
@@ -210,15 +216,69 @@
           </div>
           <div class="col-12 col-md-6 order-md-first service">
             <div class="service__content">
-              <h4 class="service__titl fs-5 fw-bold">
-                Load Shedding? No problem...
-              </h4>
+              <h4 class="service__titl fs-5 fw-bold">Superior connection</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae quas voluptatibus doloribus rerum, necessitatibus
                 animi ab adipisci blanditiis. Ab, vero?
               </p>
-              <a class="learn-more" href="/internetService.html">Learn More</a>
+              <a class="learn-more" href="/internetService.html#special">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--MOST POPULAR PLAN-->
+
+    <section class="py-5 popular__plan">
+      <div class="container plan__container">
+        <div class="row">
+          <div class="popular__content col-12 col-lg-6 plan__text mt-5">
+            <h3 class="pb-4 display-6 fw-bold">Our most popular plan</h3>
+            <p class="text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, in
+              aspernatur nesciunt ad nihil facilis suscipit sed repellendus
+              corporis ipsam sequi consectetur! Velit rem dolor eveniet fugit
+              accusamus possimus reiciendis?
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 plan__img pt-5 pt-lg-3">
+            <div class="card pricing__card popular__card mb-4 shadow-sm p-3">
+              <div class="card-body pricing__content">
+                <h6 class="card__label fs-5 fw-bold">Domestic</h6>
+                <h1 class="card-title pricing-card-title fw-bold py-3">
+                  R499<small class="text-muted fw-light">/mo</small>
+                </h1>
+                <p class="py-1">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Necessitatibus, quibusdam.
+                </p>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="py-1">
+                    <i class="bi bi-check-circle-fill pe-2"></i>Free
+                    installation
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-check-circle-fill pe-2"></i>No throttling
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-check-circle-fill pe-2"></i>24 hour support
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-check-circle-fill pe-2"></i>Free boosters
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-check-circle-fill pe-2"></i>Fast AF
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-check-circle-fill pe-2"></i>No downtime
+                  </li>
+                </ul>
+                <a href="/contact.html">
+                  <button type="button" class="button-1">Get started</button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -227,7 +287,7 @@
 
     <!--REVIEWS-->
 
-    <section class="reviews my-5 py-5 pb-3">
+    <section class="reviews mb-5 py-5 pb-3">
       <div class="container">
         <div class="section__title section__title--testimonials pb-3">
           <h3 class="section__description text-center display-6 fw-bold">
@@ -242,14 +302,14 @@
             <div class="review">
               <h4 class="review__header"></h4>
               <blockquote class="review__text fs-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                nemo voluptates obcaecati odit, consequuntur est ipsam magnam
-                vel optio iste.
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Adipisci numquam ducimus labore minus sed aut non quia cum ut
+                accusantium!"
               </blockquote>
               <address class="review__author">
-                <img src="/undraw_working_late_re_0c3y.7a4ae709.svg" alt="" class="review__photo pb-3">
-                <h6 class="review__name">Aarav Lynn</h6>
-                <p class="review__location">Ballito, Durban</p>
+                <img src="/man (1).c27e74d2.png" alt="" class="review__photo pb-3">
+                <h6 class="review__name">Adam Smith</h6>
+                <p class="review__location">Ballito</p>
               </address>
             </div>
           </div>
@@ -257,14 +317,15 @@
             <div class="review">
               <h4 class="review__header"></h4>
               <blockquote class="review__text fs-6">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Repellat rerum amet itaque, iusto culpa consequuntur excepturi
-                reiciendis deleniti commodi nobis!
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Adipisci ratione distinctio eligendi voluptatibus,
+                exercitationem ea fuga quos tenetur deleniti at voluptatem saepe
+                assumenda?"
               </blockquote>
               <address class="review__author">
-                <img src="/undraw_working_late_re_0c3y.7a4ae709.svg" alt="" class="review__photo pb-3">
-                <h6 class="review__name">Aarav Lynn</h6>
-                <p class="review__location">Ballito, Durban</p>
+                <img src="/man (2).ebcb51ac.png" alt="" class="review__photo pb-3">
+                <h6 class="review__name">Tim Dillon</h6>
+                <p class="review__location">Cape Town</p>
               </address>
             </div>
           </div>
@@ -272,14 +333,14 @@
             <div class="review">
               <h4 class="review__header"></h4>
               <blockquote class="review__text fs-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
                 pariatur error quae recusandae obcaecati sequi quos sint qui
-                quibusdam sit?
+                quibusdam sit?"
               </blockquote>
               <address class="review__author">
-                <img src="/undraw_working_late_re_0c3y.7a4ae709.svg" alt="" class="review__photo pb-3">
-                <h6 class="review__name">Aarav Lynn</h6>
-                <p class="review__location">Ballito, Durban</p>
+                <img src="/woman.58a3923a.png" alt="" class="review__photo pb-3">
+                <h6 class="review__name">Tom Maln</h6>
+                <p class="review__location">Pretoria</p>
               </address>
             </div>
           </div>
@@ -291,8 +352,8 @@
     </section>
 
     <!--Banner-->
-    <section class="banner__1 my-5 py-2">
-      <div class="container banner__container py-4">
+    <section class="banner__1 my-3 pb-2">
+      <div class="container banner__container">
         <div class="banner__content text-center py-5">
           <h3 class="display-6 fw-bold">Get the speed you need</h3>
           <img class="img-fluid banner__img pt-4" src="/speed-purple.cef0fc7d.svg" alt="">
@@ -302,7 +363,9 @@
             molestias enim.
           </p>
           <div class="pt-4">
-            <button type="button" class="button-1">Primary</button>
+            <a href="/pricing.js">
+              <button type="button" class="button-1">Get started</button>
+            </a>
           </div>
         </div>
       </div>
@@ -316,18 +379,19 @@
             Check availability
           </h3>
           <p class="availability__paragraph pt-4 fs-6">
-            Leave us your email address below and we will let you know if
+            Leave us your physical adress and we will let you know if fibr is
+            available n your area
             <span class="availability__span">fibr</span> is available in your
             area
           </p>
           <label for="newsletter1" class="visually-hidden">Email address</label>
-          <input id="newsletter1" type="text" class="form-control my-5 px-4 w-50" placeholder="Email address">
+          <input id="newsletter1" type="text" class="form-control my-5 px-4 w-50" placeholder="Your physical address">
         </div>
       </div>
     </section>
 
     <!--CONTACT-->
-    <section class="contact px-4 px-md-5 px-lg-5">
+    <section class="contact px-4 py-5 px-md-5 px-lg-5">
       <div class="container contact__container mx-auto my-5 p-1 p-sm-2 p-md-3 p-lg-4">
         <div class="row">
           <div class="col-12 col-lg-6 pt-3 px-4 pt-md-4 pt-md-0">
@@ -335,8 +399,8 @@
               Have any question?
             </h2>
             <p class="contact__paragraph pb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
-              nostrum?
+              Leave us a your questions below and we will get back to you within
+              24 hours.
             </p>
             <form>
               <div class="mb-3">
@@ -362,10 +426,10 @@
     </section>
 
     <!--FOOTER-->
-    <div class="pt-5">
+    <div>
       <footer class="py-5">
         <div class="row">
-          <div class="col-10 col-sm-12 col-md-5 offset-1 pt-5 px-1">
+          <div class="col-10 col-sm-12 col-md-6 offset-1 pt-5 px-1">
             <form>
               <h5 class="text-start display-6 fw-bold text-white">
                 Subscribe to our newsletter
@@ -380,7 +444,7 @@
               </div>
             </form>
           </div>
-          <div class="col-5 pt-5 ml-5 col-sm-6 col-md-3 ps-5">
+          <div class="col-5 pt-5 ml-5 col-sm-6 col-md-2 ps-5">
             <div class="footer__links">
               <h5 class="text-start text-purple">Links</h5>
               <ul class="nav flex-column text-start text-light">
@@ -399,9 +463,9 @@
               </ul>
             </div>
           </div>
-          <div class="col-5 pt-5 col-sm-6 ps-5 col-md-3">
+          <div class="col-5 pt-5 col-sm-6 ps-5 col-md-2">
             <div class="footer__links">
-              <h5 class="text-start">Follow us on social</h5>
+              <h5 class="text-start">Follow us</h5>
               <ul class="nav flex-column text-start">
                 <li class="nav-item mb-2">
                   <a href="#" class="nav-link p-0">Instagtam</a>

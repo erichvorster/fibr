@@ -44,6 +44,7 @@ const navSlide = () => {
         }s`;
       }
     });
+    burger.classList.toggle("toggle");
   });
 };
 
