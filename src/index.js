@@ -1,5 +1,3 @@
-import Swiper from "swiper";
-
 //Sticky Navigation
 
 const body = document.body;
@@ -172,56 +170,19 @@ slider();
 let map;
 
 function initMap() {
+  const capeT = { lat: -33.9249, lng: 18.4241 };
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
+    center: capeT,
     zoom: 8,
+  });
+  const marker = new google.maps.Marker({
+    position: capeT,
+    map,
+    title: "1000 smith street, Cape Town",
   });
 }
 
 window.initMap = initMap;
-
-//Hero nav animation
-
-gsap.from(".hero__header", {
-  zIndex: 0,
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.5,
-});
-gsap.from(".hero__sub__header", {
-  zIndex: 0,
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.6,
-});
-gsap.from(".btn-1", {
-  zIndex: 1,
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.7,
-});
-gsap.from(".hero__link", {
-  zIndex: 1,
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.8,
-});
-gsap.from(".hero__img", {
-  zIndex: 1,
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.9,
-});
 
 //Cards animation
 

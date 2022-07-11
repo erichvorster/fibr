@@ -15,7 +15,9 @@ body {
 }
 
 //NAV
-
+a {
+  text-decoration: none;
+}
 .navs {
   background-color: $light;
   position: fixed;

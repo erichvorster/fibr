@@ -157,52 +157,27 @@ var navSlide = function navSlide() {
   });
 };
 
-navSlide(); //Nav text animation
-// gsap.from(".logo", {
-//   duration: 0.5,
-//   y: 30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 0.3,
-// });
-// gsap.from(".nav-links", {
-//   duration: 0.5,
-//   y: 30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 0.3,
-// });
-//Hero animation
+navSlide(); //Map
 
-gsap.from(".hero__header__services", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.5
-});
-gsap.from(".hero__paragraph__services", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.6
-});
-gsap.from(".hero__img__services", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.7
-});
-gsap.from(".hero__img", {
-  duration: 0.5,
-  y: 30,
-  opacity: 0,
-  ease: "power4",
-  delay: 0.8,
-  zIndex: 0
-}); //popular animation
+var map;
+
+function initMap() {
+  var capeT = {
+    lat: -33.9249,
+    lng: 18.4241
+  };
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: capeT,
+    zoom: 8
+  });
+  var marker = new google.maps.Marker({
+    position: capeT,
+    map: map,
+    title: "1000 smith street, Cape Town"
+  });
+}
+
+window.initMap = initMap; //popular animation
 
 gsap.from(".popular__content", {
   scrollTrigger: ".popular__content",
@@ -331,7 +306,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53798" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50038" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

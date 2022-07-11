@@ -178,22 +178,27 @@ buttonsContainer.addEventListener("click", function (e) {
   clicked.classList.add("button__active"); // Activate content area
 
   document.querySelector(".feature__content--".concat(clicked.dataset.tab)).classList.add("feature__content__active");
-}); // gsap.from(".logo", {
-//   duration: 0.5,
-//   y: 30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 0.3,
-// });
-// gsap.from(".nav-links", {
-//   duration: 0.5,
-//   y: 30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 0.3,
-// });
-//Pricing animation
+}); //Map
 
+var map;
+
+function initMap() {
+  var capeT = {
+    lat: -33.9249,
+    lng: 18.4241
+  };
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: capeT,
+    zoom: 8
+  });
+  var marker = new google.maps.Marker({
+    position: capeT,
+    map: map,
+    title: "1000 smith street, Cape Town"
+  });
+}
+
+window.initMap = initMap;
 gsap.from(".pricing__header", {
   duration: 0.5,
   y: 30,
@@ -339,7 +344,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53798" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59734" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

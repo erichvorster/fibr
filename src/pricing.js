@@ -77,22 +77,24 @@ buttonsContainer.addEventListener("click", function (e) {
     .classList.add("feature__content__active");
 });
 
-// gsap.from(".logo", {
-//   duration: 0.5,
-//   y: 30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 0.3,
-// });
-// gsap.from(".nav-links", {
-//   duration: 0.5,
-//   y: 30,
-//   opacity: 0,
-//   ease: "power4",
-//   delay: 0.3,
-// });
+//Map
 
-//Pricing animation
+let map;
+
+function initMap() {
+  const capeT = { lat: -33.9249, lng: 18.4241 };
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: capeT,
+    zoom: 8,
+  });
+  const marker = new google.maps.Marker({
+    position: capeT,
+    map,
+    title: "1000 smith street, Cape Town",
+  });
+}
+
+window.initMap = initMap;
 
 gsap.from(".pricing__header", {
   duration: 0.5,
